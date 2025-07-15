@@ -1,3 +1,5 @@
+using MySql.Data.MySqlClient;
+
 namespace FoodCityPOS
 {
     public partial class Form1 : Form
@@ -9,6 +11,7 @@ namespace FoodCityPOS
             InitializeComponent();
         }
         private string loginUserName = "";
+        private bool loginFormCaps = true;
         private void loginZero_Click(object sender, EventArgs e)
         {
 
@@ -57,6 +60,33 @@ namespace FoodCityPOS
         private void loginNine_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginCapslock_Click(object sender, EventArgs e)
+        {
+            foreach (Button button in panel1.Controls)
+            {
+                if (loginFormCaps == true)
+                {
+                    if (button.Name != "loginCapslock" && button.Name != "loginBackspace" && button.Name != "loginEnter" && button.Name != "loginSpace")
+                    {
+                        button.Text = button.Text.ToLower();
+                    }
+                }
+                else
+                {
+                    if (button.Name != "loginCapslock" && button.Name != "loginBackspace" && button.Name != "loginEnter" && button.Name != "loginSpace")
+                    {
+                        button.Text = button.Text.ToUpper();
+                    }
+                }
+            }
+            loginFormCaps = !loginFormCaps;
         }
     }
 }

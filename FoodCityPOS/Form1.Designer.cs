@@ -71,8 +71,16 @@
             loginO = new Button();
             loginP = new Button();
             panel2 = new Panel();
-            textBox1 = new TextBox();
-            button1 = new Button();
+            invalidLoginMessage = new Label();
+            button4 = new Button();
+            loginSend = new Button();
+            label3 = new Label();
+            boxTwoClear = new Button();
+            loginBoxTwo = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
+            boxOneClear = new Button();
+            loginBoxOne = new TextBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -278,6 +286,7 @@
             loginM.TabIndex = 36;
             loginM.Text = "M";
             loginM.UseVisualStyleBackColor = false;
+            loginM.Click += loginM_Click;
             // 
             // loginN
             // 
@@ -288,6 +297,7 @@
             loginN.TabIndex = 35;
             loginN.Text = "N";
             loginN.UseVisualStyleBackColor = false;
+            loginN.Click += loginN_Click;
             // 
             // loginB
             // 
@@ -298,6 +308,7 @@
             loginB.TabIndex = 34;
             loginB.Text = "B";
             loginB.UseVisualStyleBackColor = false;
+            loginB.Click += loginB_Click;
             // 
             // loginV
             // 
@@ -308,6 +319,7 @@
             loginV.TabIndex = 33;
             loginV.Text = "V";
             loginV.UseVisualStyleBackColor = false;
+            loginV.Click += loginV_Click;
             // 
             // loginC
             // 
@@ -318,6 +330,7 @@
             loginC.TabIndex = 32;
             loginC.Text = "C";
             loginC.UseVisualStyleBackColor = false;
+            loginC.Click += loginC_Click;
             // 
             // loginX
             // 
@@ -328,6 +341,7 @@
             loginX.TabIndex = 31;
             loginX.Text = "X";
             loginX.UseVisualStyleBackColor = false;
+            loginX.Click += loginX_Click;
             // 
             // loginZ
             // 
@@ -338,6 +352,7 @@
             loginZ.TabIndex = 30;
             loginZ.Text = "Z";
             loginZ.UseVisualStyleBackColor = false;
+            loginZ.Click += loginZ_Click;
             // 
             // loginCapslock
             // 
@@ -359,6 +374,7 @@
             loginL.TabIndex = 28;
             loginL.Text = "L";
             loginL.UseVisualStyleBackColor = false;
+            loginL.Click += loginL_Click;
             // 
             // loginK
             // 
@@ -369,6 +385,7 @@
             loginK.TabIndex = 27;
             loginK.Text = "K";
             loginK.UseVisualStyleBackColor = false;
+            loginK.Click += loginK_Click;
             // 
             // loginJ
             // 
@@ -379,6 +396,7 @@
             loginJ.TabIndex = 26;
             loginJ.Text = "J";
             loginJ.UseVisualStyleBackColor = false;
+            loginJ.Click += loginJ_Click;
             // 
             // loginH
             // 
@@ -389,6 +407,7 @@
             loginH.TabIndex = 25;
             loginH.Text = "H";
             loginH.UseVisualStyleBackColor = false;
+            loginH.Click += loginH_Click;
             // 
             // loginG
             // 
@@ -399,6 +418,7 @@
             loginG.TabIndex = 24;
             loginG.Text = "G";
             loginG.UseVisualStyleBackColor = false;
+            loginG.Click += loginG_Click;
             // 
             // loginF
             // 
@@ -409,6 +429,7 @@
             loginF.TabIndex = 23;
             loginF.Text = "F";
             loginF.UseVisualStyleBackColor = false;
+            loginF.Click += loginF_Click;
             // 
             // loginD
             // 
@@ -419,6 +440,7 @@
             loginD.TabIndex = 22;
             loginD.Text = "D";
             loginD.UseVisualStyleBackColor = false;
+            loginD.Click += loginD_Click;
             // 
             // loginS
             // 
@@ -429,6 +451,7 @@
             loginS.TabIndex = 21;
             loginS.Text = "S";
             loginS.UseVisualStyleBackColor = false;
+            loginS.Click += loginS_Click;
             // 
             // loginQ
             // 
@@ -439,6 +462,7 @@
             loginQ.TabIndex = 20;
             loginQ.Text = "Q";
             loginQ.UseVisualStyleBackColor = false;
+            loginQ.Click += loginQ_Click;
             // 
             // loginW
             // 
@@ -449,6 +473,7 @@
             loginW.TabIndex = 19;
             loginW.Text = "W";
             loginW.UseVisualStyleBackColor = false;
+            loginW.Click += loginW_Click;
             // 
             // loginE
             // 
@@ -459,6 +484,7 @@
             loginE.TabIndex = 18;
             loginE.Text = "E";
             loginE.UseVisualStyleBackColor = false;
+            loginE.Click += loginE_Click;
             // 
             // loginR
             // 
@@ -469,6 +495,7 @@
             loginR.TabIndex = 17;
             loginR.Text = "R";
             loginR.UseVisualStyleBackColor = false;
+            loginR.Click += loginR_Click;
             // 
             // loginT
             // 
@@ -479,6 +506,7 @@
             loginT.TabIndex = 16;
             loginT.Text = "T";
             loginT.UseVisualStyleBackColor = false;
+            loginT.Click += loginT_Click;
             // 
             // loginA
             // 
@@ -489,6 +517,7 @@
             loginA.TabIndex = 15;
             loginA.Text = "A";
             loginA.UseVisualStyleBackColor = false;
+            loginA.Click += loginA_Click;
             // 
             // loginY
             // 
@@ -499,6 +528,7 @@
             loginY.TabIndex = 14;
             loginY.Text = "Y";
             loginY.UseVisualStyleBackColor = false;
+            loginY.Click += loginY_Click;
             // 
             // loginU
             // 
@@ -509,6 +539,7 @@
             loginU.TabIndex = 13;
             loginU.Text = "U";
             loginU.UseVisualStyleBackColor = false;
+            loginU.Click += loginU_Click;
             // 
             // loginI
             // 
@@ -519,6 +550,7 @@
             loginI.TabIndex = 12;
             loginI.Text = "I";
             loginI.UseVisualStyleBackColor = false;
+            loginI.Click += loginI_Click;
             // 
             // loginO
             // 
@@ -529,6 +561,7 @@
             loginO.TabIndex = 11;
             loginO.Text = "O";
             loginO.UseVisualStyleBackColor = false;
+            loginO.Click += loginO_Click;
             // 
             // loginP
             // 
@@ -539,31 +572,116 @@
             loginP.TabIndex = 10;
             loginP.Text = "P";
             loginP.UseVisualStyleBackColor = false;
+            loginP.Click += loginP_Click;
             // 
             // panel2
             // 
-            panel2.Controls.Add(button1);
-            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(invalidLoginMessage);
+            panel2.Controls.Add(button4);
+            panel2.Controls.Add(loginSend);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(boxTwoClear);
+            panel2.Controls.Add(loginBoxTwo);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(boxOneClear);
+            panel2.Controls.Add(loginBoxOne);
             panel2.Location = new Point(1200, 51);
             panel2.Name = "panel2";
             panel2.Size = new Size(256, 251);
             panel2.TabIndex = 12;
             // 
-            // textBox1
+            // invalidLoginMessage
             // 
-            textBox1.Location = new Point(3, 59);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(250, 23);
-            textBox1.TabIndex = 0;
+            invalidLoginMessage.AutoSize = true;
+            invalidLoginMessage.ForeColor = Color.Red;
+            invalidLoginMessage.Location = new Point(56, 215);
+            invalidLoginMessage.Name = "invalidLoginMessage";
+            invalidLoginMessage.Size = new Size(144, 15);
+            invalidLoginMessage.TabIndex = 18;
+            invalidLoginMessage.Text = "Login information invalid.";
+            invalidLoginMessage.Visible = false;
             // 
-            // button1
+            // button4
             // 
-            button1.Location = new Point(218, 59);
-            button1.Name = "button1";
-            button1.Size = new Size(26, 23);
-            button1.TabIndex = 1;
-            button1.Text = "✖";
-            button1.UseVisualStyleBackColor = true;
+            button4.Location = new Point(134, 170);
+            button4.Name = "button4";
+            button4.Size = new Size(110, 32);
+            button4.TabIndex = 17;
+            button4.Text = "Punch";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // loginSend
+            // 
+            loginSend.Location = new Point(12, 170);
+            loginSend.Name = "loginSend";
+            loginSend.Size = new Size(116, 32);
+            loginSend.TabIndex = 16;
+            loginSend.Text = "Logon";
+            loginSend.UseVisualStyleBackColor = true;
+            loginSend.Click += loginSend_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label3.Location = new Point(3, 9);
+            label3.Name = "label3";
+            label3.Size = new Size(78, 15);
+            label3.TabIndex = 15;
+            label3.Text = "Login to POS";
+            // 
+            // boxTwoClear
+            // 
+            boxTwoClear.Location = new Point(218, 103);
+            boxTwoClear.Name = "boxTwoClear";
+            boxTwoClear.Size = new Size(26, 23);
+            boxTwoClear.TabIndex = 13;
+            boxTwoClear.Text = "✖";
+            boxTwoClear.UseVisualStyleBackColor = true;
+            boxTwoClear.Click += boxTwoClear_Click;
+            // 
+            // loginBoxTwo
+            // 
+            loginBoxTwo.Location = new Point(3, 103);
+            loginBoxTwo.Name = "loginBoxTwo";
+            loginBoxTwo.Size = new Size(250, 23);
+            loginBoxTwo.TabIndex = 14;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(3, 85);
+            label2.Name = "label2";
+            label2.Size = new Size(57, 15);
+            label2.TabIndex = 3;
+            label2.Text = "Password";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(3, 41);
+            label1.Name = "label1";
+            label1.Size = new Size(51, 15);
+            label1.TabIndex = 2;
+            label1.Text = "Login ID";
+            // 
+            // boxOneClear
+            // 
+            boxOneClear.Location = new Point(218, 59);
+            boxOneClear.Name = "boxOneClear";
+            boxOneClear.Size = new Size(26, 23);
+            boxOneClear.TabIndex = 1;
+            boxOneClear.Text = "✖";
+            boxOneClear.UseVisualStyleBackColor = true;
+            boxOneClear.Click += boxOneClear_Click;
+            // 
+            // loginBoxOne
+            // 
+            loginBoxOne.Location = new Point(3, 59);
+            loginBoxOne.Name = "loginBoxOne";
+            loginBoxOne.Size = new Size(250, 23);
+            loginBoxOne.TabIndex = 0;
             // 
             // Form1
             // 
@@ -625,7 +743,15 @@
         private Button loginJ;
         private Button loginH;
         private Panel panel2;
-        private Button button1;
-        private TextBox textBox1;
+        private Button boxOneClear;
+        private TextBox loginBoxOne;
+        private Label label3;
+        private Button boxTwoClear;
+        private TextBox loginBoxTwo;
+        private Label label2;
+        private Label label1;
+        private Button button4;
+        private Button loginSend;
+        private Label invalidLoginMessage;
     }
 }

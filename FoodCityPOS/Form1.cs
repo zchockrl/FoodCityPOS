@@ -94,6 +94,7 @@ namespace FoodCityPOS
         {
         }
 
+        // Converts each valid character to their capital form
         private void loginCapslock_Click(object sender, EventArgs e)
         {
             foreach (Button button in panel1.Controls)
@@ -121,6 +122,7 @@ namespace FoodCityPOS
             activeTextBox = sender as TextBox;
         }
 
+        // For each character on the login screen keyboard, its value is added to the selected text box upon being clicked
         private void KeyboardButton_Click(object sender, EventArgs e)
         {
             if (activeTextBox == null) return;

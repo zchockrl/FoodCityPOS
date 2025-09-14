@@ -54,45 +54,6 @@ namespace FoodCityPOS
         private string loginUserName = "";
         private bool loginFormCaps = true;
         private TextBox activeTextBox = null;
-        private void loginZero_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginOne_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginTwo_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginThree_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginFour_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginFive_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginSix_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginSeven_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginEight_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginNine_Click(object sender, EventArgs e)
-        {
-        }
 
         // Converts each valid character to their capital form
         private void loginCapslock_Click(object sender, EventArgs e)
@@ -152,9 +113,13 @@ namespace FoodCityPOS
 
                         using (MySqlDataReader reader = command.ExecuteReader())
                         {
-                            if (reader.HasRows)
+                            if (reader.Read())
                             {
-                                panel1.Hide();
+                                string name = reader["name"].ToString();
+                                string position = reader["position"].ToString();
+                                MainPOSForm main = new MainPOSForm(name, position);
+                                main.Show();
+                                this.Hide();
                             }
                             else
                             {
@@ -185,110 +150,6 @@ namespace FoodCityPOS
         private void boxTwoClear_Click(object sender, EventArgs e)
         {
             loginBoxTwo.Text = "";
-        }
-
-        private void loginP_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginO_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginI_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginU_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginY_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginT_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginR_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginE_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginW_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginQ_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginL_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginK_Click(object sender, EventArgs e)
-        { 
-        }
-
-        private void loginJ_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginH_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginG_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginF_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginD_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginS_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginA_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginM_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginN_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginB_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginV_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginC_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginX_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void loginZ_Click(object sender, EventArgs e)
-        {
         }
     }
 }

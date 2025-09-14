@@ -1,4 +1,6 @@
-﻿namespace FoodCityPOS
+﻿using System.Windows.Forms;
+
+namespace FoodCityPOS
 {
     partial class Form1
     {
@@ -73,16 +75,18 @@
             panel2 = new Panel();
             invalidLoginMessage = new Label();
             button4 = new Button();
+            boxOneClear = new Button();
             loginSend = new Button();
             label3 = new Label();
             boxTwoClear = new Button();
             loginBoxTwo = new TextBox();
             label2 = new Label();
             label1 = new Label();
-            boxOneClear = new Button();
             loginBoxOne = new TextBox();
+            foodCityLogo = new PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)foodCityLogo).BeginInit();
             SuspendLayout();
             // 
             // loginOne
@@ -94,7 +98,6 @@
             loginOne.TabIndex = 0;
             loginOne.Text = "1";
             loginOne.UseVisualStyleBackColor = false;
-            loginOne.Click += loginOne_Click;
             // 
             // loginTwo
             // 
@@ -105,7 +108,6 @@
             loginTwo.TabIndex = 1;
             loginTwo.Text = "2";
             loginTwo.UseVisualStyleBackColor = false;
-            loginTwo.Click += loginTwo_Click;
             // 
             // loginThree
             // 
@@ -116,7 +118,6 @@
             loginThree.TabIndex = 2;
             loginThree.Text = "3";
             loginThree.UseVisualStyleBackColor = false;
-            loginThree.Click += loginNine_Click;
             // 
             // loginFour
             // 
@@ -157,7 +158,6 @@
             loginZero.TabIndex = 6;
             loginZero.Text = "0";
             loginZero.UseVisualStyleBackColor = false;
-            loginZero.Click += loginZero_Click;
             // 
             // loginSeven
             // 
@@ -286,7 +286,6 @@
             loginM.TabIndex = 36;
             loginM.Text = "M";
             loginM.UseVisualStyleBackColor = false;
-            loginM.Click += loginM_Click;
             // 
             // loginN
             // 
@@ -297,7 +296,6 @@
             loginN.TabIndex = 35;
             loginN.Text = "N";
             loginN.UseVisualStyleBackColor = false;
-            loginN.Click += loginN_Click;
             // 
             // loginB
             // 
@@ -308,7 +306,6 @@
             loginB.TabIndex = 34;
             loginB.Text = "B";
             loginB.UseVisualStyleBackColor = false;
-            loginB.Click += loginB_Click;
             // 
             // loginV
             // 
@@ -319,7 +316,6 @@
             loginV.TabIndex = 33;
             loginV.Text = "V";
             loginV.UseVisualStyleBackColor = false;
-            loginV.Click += loginV_Click;
             // 
             // loginC
             // 
@@ -330,7 +326,6 @@
             loginC.TabIndex = 32;
             loginC.Text = "C";
             loginC.UseVisualStyleBackColor = false;
-            loginC.Click += loginC_Click;
             // 
             // loginX
             // 
@@ -341,7 +336,6 @@
             loginX.TabIndex = 31;
             loginX.Text = "X";
             loginX.UseVisualStyleBackColor = false;
-            loginX.Click += loginX_Click;
             // 
             // loginZ
             // 
@@ -352,7 +346,6 @@
             loginZ.TabIndex = 30;
             loginZ.Text = "Z";
             loginZ.UseVisualStyleBackColor = false;
-            loginZ.Click += loginZ_Click;
             // 
             // loginCapslock
             // 
@@ -374,7 +367,6 @@
             loginL.TabIndex = 28;
             loginL.Text = "L";
             loginL.UseVisualStyleBackColor = false;
-            loginL.Click += loginL_Click;
             // 
             // loginK
             // 
@@ -385,7 +377,6 @@
             loginK.TabIndex = 27;
             loginK.Text = "K";
             loginK.UseVisualStyleBackColor = false;
-            loginK.Click += loginK_Click;
             // 
             // loginJ
             // 
@@ -396,7 +387,6 @@
             loginJ.TabIndex = 26;
             loginJ.Text = "J";
             loginJ.UseVisualStyleBackColor = false;
-            loginJ.Click += loginJ_Click;
             // 
             // loginH
             // 
@@ -407,7 +397,6 @@
             loginH.TabIndex = 25;
             loginH.Text = "H";
             loginH.UseVisualStyleBackColor = false;
-            loginH.Click += loginH_Click;
             // 
             // loginG
             // 
@@ -418,7 +407,6 @@
             loginG.TabIndex = 24;
             loginG.Text = "G";
             loginG.UseVisualStyleBackColor = false;
-            loginG.Click += loginG_Click;
             // 
             // loginF
             // 
@@ -429,7 +417,6 @@
             loginF.TabIndex = 23;
             loginF.Text = "F";
             loginF.UseVisualStyleBackColor = false;
-            loginF.Click += loginF_Click;
             // 
             // loginD
             // 
@@ -440,7 +427,6 @@
             loginD.TabIndex = 22;
             loginD.Text = "D";
             loginD.UseVisualStyleBackColor = false;
-            loginD.Click += loginD_Click;
             // 
             // loginS
             // 
@@ -451,7 +437,6 @@
             loginS.TabIndex = 21;
             loginS.Text = "S";
             loginS.UseVisualStyleBackColor = false;
-            loginS.Click += loginS_Click;
             // 
             // loginQ
             // 
@@ -462,7 +447,6 @@
             loginQ.TabIndex = 20;
             loginQ.Text = "Q";
             loginQ.UseVisualStyleBackColor = false;
-            loginQ.Click += loginQ_Click;
             // 
             // loginW
             // 
@@ -473,7 +457,6 @@
             loginW.TabIndex = 19;
             loginW.Text = "W";
             loginW.UseVisualStyleBackColor = false;
-            loginW.Click += loginW_Click;
             // 
             // loginE
             // 
@@ -484,7 +467,6 @@
             loginE.TabIndex = 18;
             loginE.Text = "E";
             loginE.UseVisualStyleBackColor = false;
-            loginE.Click += loginE_Click;
             // 
             // loginR
             // 
@@ -495,7 +477,6 @@
             loginR.TabIndex = 17;
             loginR.Text = "R";
             loginR.UseVisualStyleBackColor = false;
-            loginR.Click += loginR_Click;
             // 
             // loginT
             // 
@@ -506,7 +487,6 @@
             loginT.TabIndex = 16;
             loginT.Text = "T";
             loginT.UseVisualStyleBackColor = false;
-            loginT.Click += loginT_Click;
             // 
             // loginA
             // 
@@ -517,7 +497,6 @@
             loginA.TabIndex = 15;
             loginA.Text = "A";
             loginA.UseVisualStyleBackColor = false;
-            loginA.Click += loginA_Click;
             // 
             // loginY
             // 
@@ -528,7 +507,6 @@
             loginY.TabIndex = 14;
             loginY.Text = "Y";
             loginY.UseVisualStyleBackColor = false;
-            loginY.Click += loginY_Click;
             // 
             // loginU
             // 
@@ -539,7 +517,6 @@
             loginU.TabIndex = 13;
             loginU.Text = "U";
             loginU.UseVisualStyleBackColor = false;
-            loginU.Click += loginU_Click;
             // 
             // loginI
             // 
@@ -550,7 +527,6 @@
             loginI.TabIndex = 12;
             loginI.Text = "I";
             loginI.UseVisualStyleBackColor = false;
-            loginI.Click += loginI_Click;
             // 
             // loginO
             // 
@@ -561,7 +537,6 @@
             loginO.TabIndex = 11;
             loginO.Text = "O";
             loginO.UseVisualStyleBackColor = false;
-            loginO.Click += loginO_Click;
             // 
             // loginP
             // 
@@ -572,19 +547,18 @@
             loginP.TabIndex = 10;
             loginP.Text = "P";
             loginP.UseVisualStyleBackColor = false;
-            loginP.Click += loginP_Click;
             // 
             // panel2
             // 
             panel2.Controls.Add(invalidLoginMessage);
             panel2.Controls.Add(button4);
+            panel2.Controls.Add(boxOneClear);
             panel2.Controls.Add(loginSend);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(boxTwoClear);
             panel2.Controls.Add(loginBoxTwo);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
-            panel2.Controls.Add(boxOneClear);
             panel2.Controls.Add(loginBoxOne);
             panel2.Location = new Point(1200, 51);
             panel2.Name = "panel2";
@@ -610,6 +584,22 @@
             button4.TabIndex = 17;
             button4.Text = "Punch";
             button4.UseVisualStyleBackColor = true;
+            // 
+            // boxOneClear
+            // 
+            boxOneClear.BackColor = Color.White;
+            boxOneClear.Cursor = Cursors.Hand;
+            boxOneClear.FlatAppearance.BorderSize = 0;
+            boxOneClear.FlatStyle = FlatStyle.Flat;
+            boxOneClear.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            boxOneClear.Location = new Point(218, 59);
+            boxOneClear.Name = "boxOneClear";
+            boxOneClear.Size = new Size(26, 23);
+            boxOneClear.TabIndex = 1;
+            boxOneClear.TabStop = false;
+            boxOneClear.Text = "✖";
+            boxOneClear.UseVisualStyleBackColor = false;
+            boxOneClear.Click += boxOneClear_Click;
             // 
             // loginSend
             // 
@@ -637,6 +627,7 @@
             boxTwoClear.Name = "boxTwoClear";
             boxTwoClear.Size = new Size(26, 23);
             boxTwoClear.TabIndex = 13;
+            boxTwoClear.TabStop = false;
             boxTwoClear.Text = "✖";
             boxTwoClear.UseVisualStyleBackColor = true;
             boxTwoClear.Click += boxTwoClear_Click;
@@ -666,16 +657,6 @@
             label1.TabIndex = 2;
             label1.Text = "Login ID";
             // 
-            // boxOneClear
-            // 
-            boxOneClear.Location = new Point(218, 59);
-            boxOneClear.Name = "boxOneClear";
-            boxOneClear.Size = new Size(26, 23);
-            boxOneClear.TabIndex = 1;
-            boxOneClear.Text = "✖";
-            boxOneClear.UseVisualStyleBackColor = true;
-            boxOneClear.Click += boxOneClear_Click;
-            // 
             // loginBoxOne
             // 
             loginBoxOne.Location = new Point(3, 59);
@@ -683,18 +664,31 @@
             loginBoxOne.Size = new Size(250, 23);
             loginBoxOne.TabIndex = 0;
             // 
+            // foodCityLogo
+            // 
+            foodCityLogo.Location = new Point(335, 96);
+            foodCityLogo.Name = "foodCityLogo";
+            foodCityLogo.Size = new Size(169, 177);
+            foodCityLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            foodCityLogo.TabIndex = 13;
+            foodCityLogo.TabStop = false;
+            foodCityLogo.BackgroundImage = null;
+            // 
             // Form1
             // 
+            this.AcceptButton = loginSend;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1486, 652);
-            Controls.Add(panel2);
+            Controls.Add(foodCityLogo);
             Controls.Add(panel1);
+            Controls.Add(panel2);
             Name = "Form1";
             Text = "Form1";
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)foodCityLogo).EndInit();
             ResumeLayout(false);
         }
 
@@ -753,5 +747,6 @@
         private Button button4;
         private Button loginSend;
         private Label invalidLoginMessage;
+        private PictureBox foodCityLogo;
     }
 }

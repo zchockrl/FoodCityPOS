@@ -97,9 +97,16 @@ namespace FoodCityPOS
 
         private async void loginSend_Click(object sender, EventArgs e)
         {
-            string username = loginBoxOne.Text;
+            string username = loginBoxOne.Text.Trim();
             string password = loginBoxTwo.Text;
-            string connection = "server=localhost;user id=root;password=;database=fcupos;";
+
+            string hashedInput;
+            using (var sha = System.Security.Cryptography.SHA256.Create())
+            {
+                byte[] bytes = sha.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+                hashedInput = BitConverter.ToString(bytes).Replace("-", "").ToLower();
+            }
+            string connection = "server=localhost;user id=root;password=Bbs+Cp101422!_;database=fcupos;";
             using (MySqlConnection conn = new MySqlConnection(connection))
             {
                 try
@@ -109,7 +116,7 @@ namespace FoodCityPOS
                     using (MySqlCommand command = new MySqlCommand(query, conn))
                     {
                         command.Parameters.AddWithValue("@username", username);
-                        command.Parameters.AddWithValue("@password", password);
+                        command.Parameters.AddWithValue("@password", hashedInput);
 
                         using (MySqlDataReader reader = command.ExecuteReader())
                         {
@@ -117,6 +124,7 @@ namespace FoodCityPOS
                             {
                                 string name = reader["name"].ToString();
                                 string position = reader["position"].ToString();
+                                POSSession.currentUser = name;
                                 MainPOSForm main = new MainPOSForm(name, position);
                                 main.Show();
                                 this.Hide();

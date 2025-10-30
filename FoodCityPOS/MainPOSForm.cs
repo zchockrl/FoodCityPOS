@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace FoodCityPOS
 {
-    public partial class MainPOSForm: Form
+    public partial class MainPOSForm : Form
     {
-        public MainPOSForm()
+        private void MainPOSForm_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
+
+        }
+
+        private void signOff_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void bakeryDeliMenu_Click(object sender, EventArgs e)
+        {
         }
     }
 }

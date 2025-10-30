@@ -36,3 +36,4 @@ C:\Users\Owner\Desktop\cs\FoodCityPOS\FoodCityPOS\obj\Debug\net8.0-windows\FoodC
 C:\Users\Owner\Desktop\cs\FoodCityPOS\FoodCityPOS\obj\Debug\net8.0-windows\FoodCityPOS.genruntimeconfig.cache
 C:\Users\Owner\Desktop\cs\FoodCityPOS\FoodCityPOS\obj\Debug\net8.0-windows\ref\FoodCityPOS.dll
 C:\Users\Owner\Desktop\cs\FoodCityPOS\FoodCityPOS\obj\Debug\net8.0-windows\FoodCityPOS.MainPOSForm.resources
+C:\Users\Owner\Desktop\cs\FoodCityPOS\FoodCityPOS\bin\Debug\net8.0-windows\BCrypt.Net-Next.dll

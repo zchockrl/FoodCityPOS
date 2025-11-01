@@ -47,6 +47,11 @@ namespace FoodCityPOS
             buttonContainer.Width = (int)(this.ClientSize.Width * 0.15);
         }
 
+        private void middleContainer_Resize(object sender, EventArgs e)
+        {
+
+        }
+
         private void buttonContainer_Resize(object sender, EventArgs e)
         {
             signOff.Width = (int)(buttonContainer.Width * .6);
@@ -84,9 +89,11 @@ namespace FoodCityPOS
             customerLookup = new System.Windows.Forms.Button();
             bakeryDeliMenu = new System.Windows.Forms.Button();
             backspace = new System.Windows.Forms.Button();
+            middleContainer = new Panel();
             bottomPanel.SuspendLayout();
             valuCardPresentStrip.SuspendLayout();
             buttonContainer.SuspendLayout();
+            middleContainer.SuspendLayout();
             SuspendLayout();
             // 
             // bottomPanel
@@ -376,9 +383,9 @@ namespace FoodCityPOS
             backspace.FlatAppearance.BorderSize = 0;
             backspace.FlatStyle = FlatStyle.Flat;
             backspace.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            backspace.ForeColor = Color.Red;
+            backspace.ForeColor = Color.White;
             backspace.ImageAlign = ContentAlignment.TopLeft;
-            backspace.Location = new Point(1118, 333);
+            backspace.Location = new Point(824, 0);
             backspace.Margin = new Padding(0);
             backspace.Name = "backspace";
             backspace.Size = new Size(73, 63);
@@ -386,14 +393,21 @@ namespace FoodCityPOS
             backspace.Text = "BKSP";
             backspace.TextAlign = ContentAlignment.TopLeft;
             backspace.UseVisualStyleBackColor = false;
-            backspace.ForeColor = Color.White;
+            // 
+            // middleContainer
+            // 
+            middleContainer.Controls.Add(backspace);
+            middleContainer.Location = new Point(294, 333);
+            middleContainer.Name = "middleContainer";
+            middleContainer.Size = new Size(897, 261);
+            middleContainer.TabIndex = 9;
             // 
             // MainPOSForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1496, 614);
-            Controls.Add(backspace);
+            Controls.Add(middleContainer);
             Controls.Add(buttonContainer);
             Controls.Add(valuCardHolderInfo);
             Controls.Add(valuCardPresentStrip);
@@ -405,6 +419,7 @@ namespace FoodCityPOS
             bottomPanel.PerformLayout();
             valuCardPresentStrip.ResumeLayout(false);
             buttonContainer.ResumeLayout(false);
+            middleContainer.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -447,5 +462,6 @@ namespace FoodCityPOS
         private System.Windows.Forms.Button enterItem;
         private System.Windows.Forms.Button total;
         private System.Windows.Forms.Button backspace;
+        private Panel middleContainer;
     }
 }

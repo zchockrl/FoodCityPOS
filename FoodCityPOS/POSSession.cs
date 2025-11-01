@@ -10,5 +10,6 @@ namespace FoodCityPOS
     {
         public static string currentUser { get; set; }
         public static bool valuCardApplied { get; set; }
+
     }
 }

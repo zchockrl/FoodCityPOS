@@ -74,7 +74,16 @@ namespace FoodCityPOS
             valuCardHolderInfo = new Panel();
             signOff = new System.Windows.Forms.Button();
             buttonContainer = new Panel();
+            total = new System.Windows.Forms.Button();
+            enterItem = new System.Windows.Forms.Button();
+            voidMenu = new System.Windows.Forms.Button();
+            posMenu = new System.Windows.Forms.Button();
+            produceMenu = new System.Windows.Forms.Button();
+            departmentLookup = new System.Windows.Forms.Button();
+            itemSearch = new System.Windows.Forms.Button();
+            customerLookup = new System.Windows.Forms.Button();
             bakeryDeliMenu = new System.Windows.Forms.Button();
+            backspace = new System.Windows.Forms.Button();
             bottomPanel.SuspendLayout();
             valuCardPresentStrip.SuspendLayout();
             buttonContainer.SuspendLayout();
@@ -111,7 +120,7 @@ namespace FoodCityPOS
             currentDate.Name = "currentDate";
             currentDate.Size = new Size(70, 15);
             currentDate.TabIndex = 4;
-            currentDate.Text = DateTime.Now.ToString("MM/dd/yyyy");
+            currentDate.Text = "11/01/2025";
             // 
             // currentTime
             // 
@@ -174,58 +183,217 @@ namespace FoodCityPOS
             // signOff
             // 
             signOff.BackColor = Color.Red;
+            signOff.FlatAppearance.BorderSize = 0;
             signOff.FlatStyle = FlatStyle.Flat;
-            signOff.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            signOff.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
             signOff.ForeColor = Color.White;
             signOff.Location = new Point(0, 0);
             signOff.Margin = new Padding(0);
             signOff.Name = "signOff";
-            signOff.Size = new Size(185, 142);
+            signOff.Size = new Size(207, 128);
             signOff.TabIndex = 0;
+            signOff.TabStop = false;
             signOff.Text = "SIGN\r\nOFF";
             signOff.TextAlign = ContentAlignment.TopLeft;
             signOff.UseVisualStyleBackColor = false;
             signOff.Click += signOff_Click;
-            signOff.Margin = Padding.Empty;
-            signOff.FlatAppearance.BorderSize = 0;
-            signOff.Padding = Padding.Empty;
-            signOff.TabStop = false;
             // 
             // buttonContainer
             // 
+            buttonContainer.Controls.Add(total);
+            buttonContainer.Controls.Add(enterItem);
+            buttonContainer.Controls.Add(voidMenu);
+            buttonContainer.Controls.Add(posMenu);
+            buttonContainer.Controls.Add(produceMenu);
+            buttonContainer.Controls.Add(departmentLookup);
+            buttonContainer.Controls.Add(itemSearch);
+            buttonContainer.Controls.Add(customerLookup);
             buttonContainer.Controls.Add(bakeryDeliMenu);
             buttonContainer.Controls.Add(signOff);
+            buttonContainer.Dock = DockStyle.Right;
             buttonContainer.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             buttonContainer.Location = new Point(1191, 0);
             buttonContainer.Name = "buttonContainer";
-            buttonContainer.Size = new Size(305, 525);
+            buttonContainer.Size = new Size(305, 594);
             buttonContainer.TabIndex = 2;
-            buttonContainer.Dock = DockStyle.Right;
+            // 
+            // total
+            // 
+            total.BackColor = Color.Red;
+            total.FlatAppearance.BorderSize = 0;
+            total.FlatStyle = FlatStyle.Flat;
+            total.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            total.ForeColor = Color.White;
+            total.ImageAlign = ContentAlignment.TopLeft;
+            total.Location = new Point(103, 460);
+            total.Margin = new Padding(0);
+            total.Name = "total";
+            total.Size = new Size(202, 134);
+            total.TabIndex = 9;
+            total.TabStop = false;
+            total.Text = "TOTAL";
+            total.TextAlign = ContentAlignment.TopLeft;
+            total.UseVisualStyleBackColor = false;
+            // 
+            // enterItem
+            // 
+            enterItem.BackColor = Color.Blue;
+            enterItem.FlatAppearance.BorderSize = 0;
+            enterItem.FlatStyle = FlatStyle.Flat;
+            enterItem.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            enterItem.ForeColor = Color.White;
+            enterItem.ImageAlign = ContentAlignment.TopCenter;
+            enterItem.Location = new Point(0, 460);
+            enterItem.Margin = new Padding(0);
+            enterItem.Name = "enterItem";
+            enterItem.Size = new Size(103, 134);
+            enterItem.TabIndex = 8;
+            enterItem.Text = "ENTER\r\nITEM";
+            enterItem.TextAlign = ContentAlignment.TopLeft;
+            enterItem.UseVisualStyleBackColor = false;
+            // 
+            // voidMenu
+            // 
+            voidMenu.BackColor = Color.Yellow;
+            voidMenu.FlatAppearance.BorderSize = 0;
+            voidMenu.FlatStyle = FlatStyle.Flat;
+            voidMenu.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            voidMenu.ForeColor = Color.Red;
+            voidMenu.ImageAlign = ContentAlignment.TopCenter;
+            voidMenu.Location = new Point(207, 333);
+            voidMenu.Margin = new Padding(0);
+            voidMenu.Name = "voidMenu";
+            voidMenu.Size = new Size(98, 127);
+            voidMenu.TabIndex = 7;
+            voidMenu.Text = "VOID\r\nMENU";
+            voidMenu.TextAlign = ContentAlignment.TopLeft;
+            voidMenu.UseVisualStyleBackColor = false;
+            // 
+            // posMenu
+            // 
+            posMenu.BackColor = Color.DarkOrange;
+            posMenu.FlatAppearance.BorderSize = 0;
+            posMenu.FlatStyle = FlatStyle.Flat;
+            posMenu.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            posMenu.ImageAlign = ContentAlignment.TopLeft;
+            posMenu.Location = new Point(0, 333);
+            posMenu.Margin = new Padding(0);
+            posMenu.Name = "posMenu";
+            posMenu.Size = new Size(207, 127);
+            posMenu.TabIndex = 6;
+            posMenu.TabStop = false;
+            posMenu.Text = "POS\r\nMENU";
+            posMenu.TextAlign = ContentAlignment.TopLeft;
+            posMenu.UseVisualStyleBackColor = false;
+            // 
+            // produceMenu
+            // 
+            produceMenu.BackColor = Color.DarkGreen;
+            produceMenu.FlatAppearance.BorderSize = 0;
+            produceMenu.FlatStyle = FlatStyle.Flat;
+            produceMenu.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            produceMenu.ForeColor = Color.White;
+            produceMenu.ImageAlign = ContentAlignment.TopLeft;
+            produceMenu.Location = new Point(0, 291);
+            produceMenu.Margin = new Padding(0);
+            produceMenu.Name = "produceMenu";
+            produceMenu.Size = new Size(305, 42);
+            produceMenu.TabIndex = 5;
+            produceMenu.TabStop = false;
+            produceMenu.Text = "PRODUCE MENU";
+            produceMenu.TextAlign = ContentAlignment.TopLeft;
+            produceMenu.UseVisualStyleBackColor = false;
+            // 
+            // departmentLookup
+            // 
+            departmentLookup.BackColor = Color.Gold;
+            departmentLookup.FlatAppearance.BorderSize = 0;
+            departmentLookup.FlatStyle = FlatStyle.Flat;
+            departmentLookup.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            departmentLookup.ImageAlign = ContentAlignment.TopLeft;
+            departmentLookup.Location = new Point(0, 249);
+            departmentLookup.Margin = new Padding(0);
+            departmentLookup.Name = "departmentLookup";
+            departmentLookup.Size = new Size(305, 42);
+            departmentLookup.TabIndex = 4;
+            departmentLookup.TabStop = false;
+            departmentLookup.Text = "DEPARTMENTS";
+            departmentLookup.TextAlign = ContentAlignment.TopLeft;
+            departmentLookup.UseVisualStyleBackColor = false;
+            // 
+            // itemSearch
+            // 
+            itemSearch.BackColor = Color.FromArgb(255, 128, 0);
+            itemSearch.FlatAppearance.BorderSize = 0;
+            itemSearch.FlatStyle = FlatStyle.Flat;
+            itemSearch.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            itemSearch.ForeColor = Color.White;
+            itemSearch.Location = new Point(207, 128);
+            itemSearch.Margin = new Padding(0);
+            itemSearch.Name = "itemSearch";
+            itemSearch.Size = new Size(98, 121);
+            itemSearch.TabIndex = 3;
+            itemSearch.Text = "ITEM\r\nSEARCH";
+            itemSearch.TextAlign = ContentAlignment.TopLeft;
+            itemSearch.UseVisualStyleBackColor = false;
+            // 
+            // customerLookup
+            // 
+            customerLookup.BackColor = Color.Blue;
+            customerLookup.FlatAppearance.BorderSize = 0;
+            customerLookup.FlatStyle = FlatStyle.Flat;
+            customerLookup.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            customerLookup.ForeColor = Color.White;
+            customerLookup.Location = new Point(0, 128);
+            customerLookup.Margin = new Padding(0);
+            customerLookup.Name = "customerLookup";
+            customerLookup.Size = new Size(207, 121);
+            customerLookup.TabIndex = 2;
+            customerLookup.TabStop = false;
+            customerLookup.Text = "CUSTOMER\r\nLOOKUP";
+            customerLookup.TextAlign = ContentAlignment.TopLeft;
+            customerLookup.UseVisualStyleBackColor = false;
             // 
             // bakeryDeliMenu
             // 
             bakeryDeliMenu.BackColor = Color.Green;
+            bakeryDeliMenu.FlatAppearance.BorderSize = 0;
             bakeryDeliMenu.FlatStyle = FlatStyle.Flat;
             bakeryDeliMenu.ForeColor = Color.White;
-            bakeryDeliMenu.Location = new Point(184, 0);
+            bakeryDeliMenu.Location = new Point(207, 0);
             bakeryDeliMenu.Margin = new Padding(0);
             bakeryDeliMenu.Name = "bakeryDeliMenu";
-            bakeryDeliMenu.Size = new Size(121, 142);
+            bakeryDeliMenu.Size = new Size(98, 128);
             bakeryDeliMenu.TabIndex = 1;
+            bakeryDeliMenu.TabStop = false;
             bakeryDeliMenu.Text = "BAKERY\r\nDELI\r\nMENU";
             bakeryDeliMenu.TextAlign = ContentAlignment.TopLeft;
             bakeryDeliMenu.UseVisualStyleBackColor = false;
-            bakeryDeliMenu.FlatAppearance.BorderSize = 0;
-            bakeryDeliMenu.Margin = Padding.Empty;
-            bakeryDeliMenu.Padding = Padding.Empty;
-            bakeryDeliMenu.TabStop = false;
-
+            // 
+            // backspace
+            // 
+            backspace.BackColor = Color.DarkGray;
+            backspace.FlatAppearance.BorderSize = 0;
+            backspace.FlatStyle = FlatStyle.Flat;
+            backspace.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            backspace.ForeColor = Color.Red;
+            backspace.ImageAlign = ContentAlignment.TopLeft;
+            backspace.Location = new Point(1118, 333);
+            backspace.Margin = new Padding(0);
+            backspace.Name = "backspace";
+            backspace.Size = new Size(73, 63);
+            backspace.TabIndex = 8;
+            backspace.Text = "BKSP";
+            backspace.TextAlign = ContentAlignment.TopLeft;
+            backspace.UseVisualStyleBackColor = false;
+            backspace.ForeColor = Color.White;
             // 
             // MainPOSForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1496, 614);
+            Controls.Add(backspace);
             Controls.Add(buttonContainer);
             Controls.Add(valuCardHolderInfo);
             Controls.Add(valuCardPresentStrip);
@@ -270,5 +438,14 @@ namespace FoodCityPOS
         private System.Windows.Forms.Button signOff;
         private Panel buttonContainer;
         private System.Windows.Forms.Button bakeryDeliMenu;
+        private System.Windows.Forms.Button customerLookup;
+        private System.Windows.Forms.Button itemSearch;
+        private System.Windows.Forms.Button departmentLookup;
+        private System.Windows.Forms.Button produceMenu;
+        private System.Windows.Forms.Button voidMenu;
+        private System.Windows.Forms.Button posMenu;
+        private System.Windows.Forms.Button enterItem;
+        private System.Windows.Forms.Button total;
+        private System.Windows.Forms.Button backspace;
     }
 }

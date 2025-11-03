@@ -24,5 +24,10 @@ namespace FoodCityPOS
         private void bakeryDeliMenu_Click(object sender, EventArgs e)
         {
         }
+
+        private void voidMenu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

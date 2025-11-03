@@ -11,5 +11,8 @@ namespace FoodCityPOS
         public static string currentUser { get; set; }
         public static bool valuCardApplied { get; set; }
 
+        public static List<Item> delayedVoids = new List<Item>();
+
+        public static Item lastItem { get; set; }
     }
 }

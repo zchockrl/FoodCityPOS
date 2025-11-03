@@ -640,11 +640,11 @@ namespace FoodCityPOS
             boxOneClear.Location = new Point(311, 98);
             boxOneClear.Margin = new Padding(4, 5, 4, 5);
             boxOneClear.Name = "boxOneClear";
-            boxOneClear.Size = new Size(37, 38);
+            boxOneClear.Size = new Size(37, 31);
             boxOneClear.TabIndex = 1;
             boxOneClear.TabStop = false;
             boxOneClear.Text = "✖";
-            boxOneClear.UseVisualStyleBackColor = false;
+            boxOneClear.UseVisualStyleBackColor = true;
             boxOneClear.Click += boxOneClear_Click;
             // 
             // loginSend
@@ -674,7 +674,7 @@ namespace FoodCityPOS
             boxTwoClear.Location = new Point(311, 172);
             boxTwoClear.Margin = new Padding(4, 5, 4, 5);
             boxTwoClear.Name = "boxTwoClear";
-            boxTwoClear.Size = new Size(37, 38);
+            boxTwoClear.Size = new Size(37, 31);
             boxTwoClear.TabIndex = 13;
             boxTwoClear.TabStop = false;
             boxTwoClear.Text = "✖";

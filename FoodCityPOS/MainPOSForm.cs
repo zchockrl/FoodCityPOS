@@ -29,5 +29,10 @@ namespace FoodCityPOS
         {
 
         }
+
+        private void buttonContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

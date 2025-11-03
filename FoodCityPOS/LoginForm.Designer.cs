@@ -43,7 +43,7 @@ namespace FoodCityPOS
             panel1 = new Panel();
             loginEnter = new Button();
             loginSpace = new Button();
-            button30 = new Button();
+            miscButtons = new Button();
             loginBackspace = new Button();
             loginM = new Button();
             loginN = new Button();
@@ -203,7 +203,7 @@ namespace FoodCityPOS
             // 
             panel1.Controls.Add(loginEnter);
             panel1.Controls.Add(loginSpace);
-            panel1.Controls.Add(button30);
+            panel1.Controls.Add(miscButtons);
             panel1.Controls.Add(loginBackspace);
             panel1.Controls.Add(loginM);
             panel1.Controls.Add(loginN);
@@ -270,16 +270,16 @@ namespace FoodCityPOS
             loginSpace.Text = "SPACE";
             loginSpace.UseVisualStyleBackColor = false;
             // 
-            // button30
+            // miscButtons
             // 
-            button30.BackColor = SystemColors.ControlDarkDark;
-            button30.Location = new Point(176, 472);
-            button30.Margin = new Padding(4, 5, 4, 5);
-            button30.Name = "button30";
-            button30.Size = new Size(140, 77);
-            button30.TabIndex = 38;
-            button30.Text = "#+?";
-            button30.UseVisualStyleBackColor = false;
+            miscButtons.BackColor = SystemColors.ControlDarkDark;
+            miscButtons.Location = new Point(176, 472);
+            miscButtons.Margin = new Padding(4, 5, 4, 5);
+            miscButtons.Name = "miscButtons";
+            miscButtons.Size = new Size(140, 77);
+            miscButtons.TabIndex = 38;
+            miscButtons.Text = "#+?";
+            miscButtons.UseVisualStyleBackColor = false;
             // 
             // loginBackspace
             // 
@@ -776,7 +776,7 @@ namespace FoodCityPOS
         private Button loginP;
         private Button loginEnter;
         private Button loginSpace;
-        private Button button30;
+        private Button miscButtons;
         private Button loginBackspace;
         private Button loginM;
         private Button loginN;

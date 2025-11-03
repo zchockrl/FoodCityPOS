@@ -92,9 +92,10 @@ namespace FoodCityPOS
             // loginOne
             // 
             loginOne.BackColor = SystemColors.ControlDarkDark;
-            loginOne.Location = new Point(1227, 209);
+            loginOne.Location = new Point(1753, 348);
+            loginOne.Margin = new Padding(4, 5, 4, 5);
             loginOne.Name = "loginOne";
-            loginOne.Size = new Size(60, 46);
+            loginOne.Size = new Size(86, 77);
             loginOne.TabIndex = 0;
             loginOne.Text = "1";
             loginOne.UseVisualStyleBackColor = false;
@@ -102,9 +103,10 @@ namespace FoodCityPOS
             // loginTwo
             // 
             loginTwo.BackColor = SystemColors.ControlDarkDark;
-            loginTwo.Location = new Point(1283, 209);
+            loginTwo.Location = new Point(1833, 348);
+            loginTwo.Margin = new Padding(4, 5, 4, 5);
             loginTwo.Name = "loginTwo";
-            loginTwo.Size = new Size(60, 46);
+            loginTwo.Size = new Size(86, 77);
             loginTwo.TabIndex = 1;
             loginTwo.Text = "2";
             loginTwo.UseVisualStyleBackColor = false;
@@ -112,9 +114,10 @@ namespace FoodCityPOS
             // loginThree
             // 
             loginThree.BackColor = SystemColors.ControlDarkDark;
-            loginThree.Location = new Point(1339, 209);
+            loginThree.Location = new Point(1913, 348);
+            loginThree.Margin = new Padding(4, 5, 4, 5);
             loginThree.Name = "loginThree";
-            loginThree.Size = new Size(60, 46);
+            loginThree.Size = new Size(86, 77);
             loginThree.TabIndex = 2;
             loginThree.Text = "3";
             loginThree.UseVisualStyleBackColor = false;
@@ -122,9 +125,10 @@ namespace FoodCityPOS
             // loginFour
             // 
             loginFour.BackColor = SystemColors.ControlDarkDark;
-            loginFour.Location = new Point(1227, 167);
+            loginFour.Location = new Point(1753, 278);
+            loginFour.Margin = new Padding(4, 5, 4, 5);
             loginFour.Name = "loginFour";
-            loginFour.Size = new Size(60, 46);
+            loginFour.Size = new Size(86, 77);
             loginFour.TabIndex = 3;
             loginFour.Text = "4";
             loginFour.UseVisualStyleBackColor = false;
@@ -132,9 +136,10 @@ namespace FoodCityPOS
             // loginFive
             // 
             loginFive.BackColor = SystemColors.ControlDarkDark;
-            loginFive.Location = new Point(1283, 167);
+            loginFive.Location = new Point(1833, 278);
+            loginFive.Margin = new Padding(4, 5, 4, 5);
             loginFive.Name = "loginFive";
-            loginFive.Size = new Size(60, 46);
+            loginFive.Size = new Size(86, 77);
             loginFive.TabIndex = 4;
             loginFive.Text = "5";
             loginFive.UseVisualStyleBackColor = false;
@@ -142,9 +147,10 @@ namespace FoodCityPOS
             // loginSix
             // 
             loginSix.BackColor = SystemColors.ControlDarkDark;
-            loginSix.Location = new Point(1339, 167);
+            loginSix.Location = new Point(1913, 278);
+            loginSix.Margin = new Padding(4, 5, 4, 5);
             loginSix.Name = "loginSix";
-            loginSix.Size = new Size(60, 46);
+            loginSix.Size = new Size(86, 77);
             loginSix.TabIndex = 5;
             loginSix.Text = "6";
             loginSix.UseVisualStyleBackColor = false;
@@ -152,9 +158,10 @@ namespace FoodCityPOS
             // loginZero
             // 
             loginZero.BackColor = SystemColors.ControlDarkDark;
-            loginZero.Location = new Point(1283, 250);
+            loginZero.Location = new Point(1833, 422);
+            loginZero.Margin = new Padding(4, 5, 4, 5);
             loginZero.Name = "loginZero";
-            loginZero.Size = new Size(60, 46);
+            loginZero.Size = new Size(86, 77);
             loginZero.TabIndex = 6;
             loginZero.Text = "0";
             loginZero.UseVisualStyleBackColor = false;
@@ -162,9 +169,10 @@ namespace FoodCityPOS
             // loginSeven
             // 
             loginSeven.BackColor = SystemColors.ControlDarkDark;
-            loginSeven.Location = new Point(1227, 128);
+            loginSeven.Location = new Point(1753, 213);
+            loginSeven.Margin = new Padding(4, 5, 4, 5);
             loginSeven.Name = "loginSeven";
-            loginSeven.Size = new Size(60, 46);
+            loginSeven.Size = new Size(86, 77);
             loginSeven.TabIndex = 7;
             loginSeven.Text = "7";
             loginSeven.UseVisualStyleBackColor = false;
@@ -172,9 +180,10 @@ namespace FoodCityPOS
             // loginEight
             // 
             loginEight.BackColor = SystemColors.ControlDarkDark;
-            loginEight.Location = new Point(1283, 128);
+            loginEight.Location = new Point(1833, 213);
+            loginEight.Margin = new Padding(4, 5, 4, 5);
             loginEight.Name = "loginEight";
-            loginEight.Size = new Size(60, 46);
+            loginEight.Size = new Size(86, 77);
             loginEight.TabIndex = 8;
             loginEight.Text = "8";
             loginEight.UseVisualStyleBackColor = false;
@@ -182,9 +191,10 @@ namespace FoodCityPOS
             // loginNine
             // 
             loginNine.BackColor = SystemColors.ControlDarkDark;
-            loginNine.Location = new Point(1339, 128);
+            loginNine.Location = new Point(1913, 213);
+            loginNine.Margin = new Padding(4, 5, 4, 5);
             loginNine.Name = "loginNine";
-            loginNine.Size = new Size(60, 46);
+            loginNine.Size = new Size(86, 77);
             loginNine.TabIndex = 9;
             loginNine.Text = "9";
             loginNine.UseVisualStyleBackColor = false;
@@ -232,17 +242,19 @@ namespace FoodCityPOS
             panel1.Controls.Add(loginFour);
             panel1.Controls.Add(loginSix);
             panel1.Controls.Add(loginFive);
-            panel1.Location = new Point(1, 308);
+            panel1.Location = new Point(1, 513);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1489, 332);
+            panel1.Size = new Size(2127, 553);
             panel1.TabIndex = 11;
             // 
             // loginEnter
             // 
             loginEnter.BackColor = SystemColors.ControlDarkDark;
-            loginEnter.Location = new Point(651, 284);
+            loginEnter.Location = new Point(930, 473);
+            loginEnter.Margin = new Padding(4, 5, 4, 5);
             loginEnter.Name = "loginEnter";
-            loginEnter.Size = new Size(125, 46);
+            loginEnter.Size = new Size(179, 77);
             loginEnter.TabIndex = 40;
             loginEnter.Text = "ENTER";
             loginEnter.UseVisualStyleBackColor = false;
@@ -250,9 +262,10 @@ namespace FoodCityPOS
             // loginSpace
             // 
             loginSpace.BackColor = SystemColors.ControlDarkDark;
-            loginSpace.Location = new Point(227, 283);
+            loginSpace.Location = new Point(324, 472);
+            loginSpace.Margin = new Padding(4, 5, 4, 5);
             loginSpace.Name = "loginSpace";
-            loginSpace.Size = new Size(418, 46);
+            loginSpace.Size = new Size(597, 77);
             loginSpace.TabIndex = 39;
             loginSpace.Text = "SPACE";
             loginSpace.UseVisualStyleBackColor = false;
@@ -260,9 +273,10 @@ namespace FoodCityPOS
             // button30
             // 
             button30.BackColor = SystemColors.ControlDarkDark;
-            button30.Location = new Point(123, 283);
+            button30.Location = new Point(176, 472);
+            button30.Margin = new Padding(4, 5, 4, 5);
             button30.Name = "button30";
-            button30.Size = new Size(98, 46);
+            button30.Size = new Size(140, 77);
             button30.TabIndex = 38;
             button30.Text = "#+?";
             button30.UseVisualStyleBackColor = false;
@@ -270,9 +284,10 @@ namespace FoodCityPOS
             // loginBackspace
             // 
             loginBackspace.BackColor = SystemColors.ControlDarkDark;
-            loginBackspace.Location = new Point(651, 232);
+            loginBackspace.Location = new Point(930, 387);
+            loginBackspace.Margin = new Padding(4, 5, 4, 5);
             loginBackspace.Name = "loginBackspace";
-            loginBackspace.Size = new Size(125, 46);
+            loginBackspace.Size = new Size(179, 77);
             loginBackspace.TabIndex = 37;
             loginBackspace.Text = "BACKSPACE";
             loginBackspace.UseVisualStyleBackColor = false;
@@ -280,9 +295,10 @@ namespace FoodCityPOS
             // loginM
             // 
             loginM.BackColor = SystemColors.ControlDarkDark;
-            loginM.Location = new Point(585, 232);
+            loginM.Location = new Point(836, 387);
+            loginM.Margin = new Padding(4, 5, 4, 5);
             loginM.Name = "loginM";
-            loginM.Size = new Size(60, 46);
+            loginM.Size = new Size(86, 77);
             loginM.TabIndex = 36;
             loginM.Text = "M";
             loginM.UseVisualStyleBackColor = false;
@@ -290,9 +306,10 @@ namespace FoodCityPOS
             // loginN
             // 
             loginN.BackColor = SystemColors.ControlDarkDark;
-            loginN.Location = new Point(519, 232);
+            loginN.Location = new Point(741, 387);
+            loginN.Margin = new Padding(4, 5, 4, 5);
             loginN.Name = "loginN";
-            loginN.Size = new Size(60, 46);
+            loginN.Size = new Size(86, 77);
             loginN.TabIndex = 35;
             loginN.Text = "N";
             loginN.UseVisualStyleBackColor = false;
@@ -300,9 +317,10 @@ namespace FoodCityPOS
             // loginB
             // 
             loginB.BackColor = SystemColors.ControlDarkDark;
-            loginB.Location = new Point(453, 232);
+            loginB.Location = new Point(647, 387);
+            loginB.Margin = new Padding(4, 5, 4, 5);
             loginB.Name = "loginB";
-            loginB.Size = new Size(60, 46);
+            loginB.Size = new Size(86, 77);
             loginB.TabIndex = 34;
             loginB.Text = "B";
             loginB.UseVisualStyleBackColor = false;
@@ -310,9 +328,10 @@ namespace FoodCityPOS
             // loginV
             // 
             loginV.BackColor = SystemColors.ControlDarkDark;
-            loginV.Location = new Point(387, 232);
+            loginV.Location = new Point(553, 387);
+            loginV.Margin = new Padding(4, 5, 4, 5);
             loginV.Name = "loginV";
-            loginV.Size = new Size(60, 46);
+            loginV.Size = new Size(86, 77);
             loginV.TabIndex = 33;
             loginV.Text = "V";
             loginV.UseVisualStyleBackColor = false;
@@ -320,9 +339,10 @@ namespace FoodCityPOS
             // loginC
             // 
             loginC.BackColor = SystemColors.ControlDarkDark;
-            loginC.Location = new Point(321, 232);
+            loginC.Location = new Point(459, 387);
+            loginC.Margin = new Padding(4, 5, 4, 5);
             loginC.Name = "loginC";
-            loginC.Size = new Size(60, 46);
+            loginC.Size = new Size(86, 77);
             loginC.TabIndex = 32;
             loginC.Text = "C";
             loginC.UseVisualStyleBackColor = false;
@@ -330,9 +350,10 @@ namespace FoodCityPOS
             // loginX
             // 
             loginX.BackColor = SystemColors.ControlDarkDark;
-            loginX.Location = new Point(255, 232);
+            loginX.Location = new Point(364, 387);
+            loginX.Margin = new Padding(4, 5, 4, 5);
             loginX.Name = "loginX";
-            loginX.Size = new Size(60, 46);
+            loginX.Size = new Size(86, 77);
             loginX.TabIndex = 31;
             loginX.Text = "X";
             loginX.UseVisualStyleBackColor = false;
@@ -340,9 +361,10 @@ namespace FoodCityPOS
             // loginZ
             // 
             loginZ.BackColor = SystemColors.ControlDarkDark;
-            loginZ.Location = new Point(189, 232);
+            loginZ.Location = new Point(270, 387);
+            loginZ.Margin = new Padding(4, 5, 4, 5);
             loginZ.Name = "loginZ";
-            loginZ.Size = new Size(60, 46);
+            loginZ.Size = new Size(86, 77);
             loginZ.TabIndex = 30;
             loginZ.Text = "Z";
             loginZ.UseVisualStyleBackColor = false;
@@ -350,9 +372,10 @@ namespace FoodCityPOS
             // loginCapslock
             // 
             loginCapslock.BackColor = SystemColors.ControlDarkDark;
-            loginCapslock.Location = new Point(123, 232);
+            loginCapslock.Location = new Point(176, 387);
+            loginCapslock.Margin = new Padding(4, 5, 4, 5);
             loginCapslock.Name = "loginCapslock";
-            loginCapslock.Size = new Size(60, 46);
+            loginCapslock.Size = new Size(86, 77);
             loginCapslock.TabIndex = 29;
             loginCapslock.Text = "CAPS\r\nLOCK";
             loginCapslock.UseVisualStyleBackColor = false;
@@ -361,9 +384,10 @@ namespace FoodCityPOS
             // loginL
             // 
             loginL.BackColor = SystemColors.ControlDarkDark;
-            loginL.Location = new Point(697, 180);
+            loginL.Location = new Point(996, 300);
+            loginL.Margin = new Padding(4, 5, 4, 5);
             loginL.Name = "loginL";
-            loginL.Size = new Size(60, 46);
+            loginL.Size = new Size(86, 77);
             loginL.TabIndex = 28;
             loginL.Text = "L";
             loginL.UseVisualStyleBackColor = false;
@@ -371,9 +395,10 @@ namespace FoodCityPOS
             // loginK
             // 
             loginK.BackColor = SystemColors.ControlDarkDark;
-            loginK.Location = new Point(631, 180);
+            loginK.Location = new Point(901, 300);
+            loginK.Margin = new Padding(4, 5, 4, 5);
             loginK.Name = "loginK";
-            loginK.Size = new Size(60, 46);
+            loginK.Size = new Size(86, 77);
             loginK.TabIndex = 27;
             loginK.Text = "K";
             loginK.UseVisualStyleBackColor = false;
@@ -381,9 +406,10 @@ namespace FoodCityPOS
             // loginJ
             // 
             loginJ.BackColor = SystemColors.ControlDarkDark;
-            loginJ.Location = new Point(565, 180);
+            loginJ.Location = new Point(807, 300);
+            loginJ.Margin = new Padding(4, 5, 4, 5);
             loginJ.Name = "loginJ";
-            loginJ.Size = new Size(60, 46);
+            loginJ.Size = new Size(86, 77);
             loginJ.TabIndex = 26;
             loginJ.Text = "J";
             loginJ.UseVisualStyleBackColor = false;
@@ -391,9 +417,10 @@ namespace FoodCityPOS
             // loginH
             // 
             loginH.BackColor = SystemColors.ControlDarkDark;
-            loginH.Location = new Point(499, 180);
+            loginH.Location = new Point(713, 300);
+            loginH.Margin = new Padding(4, 5, 4, 5);
             loginH.Name = "loginH";
-            loginH.Size = new Size(60, 46);
+            loginH.Size = new Size(86, 77);
             loginH.TabIndex = 25;
             loginH.Text = "H";
             loginH.UseVisualStyleBackColor = false;
@@ -401,9 +428,10 @@ namespace FoodCityPOS
             // loginG
             // 
             loginG.BackColor = SystemColors.ControlDarkDark;
-            loginG.Location = new Point(425, 180);
+            loginG.Location = new Point(607, 300);
+            loginG.Margin = new Padding(4, 5, 4, 5);
             loginG.Name = "loginG";
-            loginG.Size = new Size(60, 46);
+            loginG.Size = new Size(86, 77);
             loginG.TabIndex = 24;
             loginG.Text = "G";
             loginG.UseVisualStyleBackColor = false;
@@ -411,9 +439,10 @@ namespace FoodCityPOS
             // loginF
             // 
             loginF.BackColor = SystemColors.ControlDarkDark;
-            loginF.Location = new Point(359, 180);
+            loginF.Location = new Point(513, 300);
+            loginF.Margin = new Padding(4, 5, 4, 5);
             loginF.Name = "loginF";
-            loginF.Size = new Size(60, 46);
+            loginF.Size = new Size(86, 77);
             loginF.TabIndex = 23;
             loginF.Text = "F";
             loginF.UseVisualStyleBackColor = false;
@@ -421,9 +450,10 @@ namespace FoodCityPOS
             // loginD
             // 
             loginD.BackColor = SystemColors.ControlDarkDark;
-            loginD.Location = new Point(293, 180);
+            loginD.Location = new Point(419, 300);
+            loginD.Margin = new Padding(4, 5, 4, 5);
             loginD.Name = "loginD";
-            loginD.Size = new Size(60, 46);
+            loginD.Size = new Size(86, 77);
             loginD.TabIndex = 22;
             loginD.Text = "D";
             loginD.UseVisualStyleBackColor = false;
@@ -431,9 +461,10 @@ namespace FoodCityPOS
             // loginS
             // 
             loginS.BackColor = SystemColors.ControlDarkDark;
-            loginS.Location = new Point(227, 180);
+            loginS.Location = new Point(324, 300);
+            loginS.Margin = new Padding(4, 5, 4, 5);
             loginS.Name = "loginS";
-            loginS.Size = new Size(60, 46);
+            loginS.Size = new Size(86, 77);
             loginS.TabIndex = 21;
             loginS.Text = "S";
             loginS.UseVisualStyleBackColor = false;
@@ -441,9 +472,10 @@ namespace FoodCityPOS
             // loginQ
             // 
             loginQ.BackColor = SystemColors.ControlDarkDark;
-            loginQ.Location = new Point(123, 128);
+            loginQ.Location = new Point(176, 213);
+            loginQ.Margin = new Padding(4, 5, 4, 5);
             loginQ.Name = "loginQ";
-            loginQ.Size = new Size(60, 46);
+            loginQ.Size = new Size(86, 77);
             loginQ.TabIndex = 20;
             loginQ.Text = "Q";
             loginQ.UseVisualStyleBackColor = false;
@@ -451,9 +483,10 @@ namespace FoodCityPOS
             // loginW
             // 
             loginW.BackColor = SystemColors.ControlDarkDark;
-            loginW.Location = new Point(189, 128);
+            loginW.Location = new Point(270, 213);
+            loginW.Margin = new Padding(4, 5, 4, 5);
             loginW.Name = "loginW";
-            loginW.Size = new Size(60, 46);
+            loginW.Size = new Size(86, 77);
             loginW.TabIndex = 19;
             loginW.Text = "W";
             loginW.UseVisualStyleBackColor = false;
@@ -461,9 +494,10 @@ namespace FoodCityPOS
             // loginE
             // 
             loginE.BackColor = SystemColors.ControlDarkDark;
-            loginE.Location = new Point(255, 128);
+            loginE.Location = new Point(364, 213);
+            loginE.Margin = new Padding(4, 5, 4, 5);
             loginE.Name = "loginE";
-            loginE.Size = new Size(60, 46);
+            loginE.Size = new Size(86, 77);
             loginE.TabIndex = 18;
             loginE.Text = "E";
             loginE.UseVisualStyleBackColor = false;
@@ -471,9 +505,10 @@ namespace FoodCityPOS
             // loginR
             // 
             loginR.BackColor = SystemColors.ControlDarkDark;
-            loginR.Location = new Point(321, 128);
+            loginR.Location = new Point(459, 213);
+            loginR.Margin = new Padding(4, 5, 4, 5);
             loginR.Name = "loginR";
-            loginR.Size = new Size(60, 46);
+            loginR.Size = new Size(86, 77);
             loginR.TabIndex = 17;
             loginR.Text = "R";
             loginR.UseVisualStyleBackColor = false;
@@ -481,9 +516,10 @@ namespace FoodCityPOS
             // loginT
             // 
             loginT.BackColor = SystemColors.ControlDarkDark;
-            loginT.Location = new Point(387, 128);
+            loginT.Location = new Point(553, 213);
+            loginT.Margin = new Padding(4, 5, 4, 5);
             loginT.Name = "loginT";
-            loginT.Size = new Size(60, 46);
+            loginT.Size = new Size(86, 77);
             loginT.TabIndex = 16;
             loginT.Text = "T";
             loginT.UseVisualStyleBackColor = false;
@@ -491,9 +527,10 @@ namespace FoodCityPOS
             // loginA
             // 
             loginA.BackColor = SystemColors.ControlDarkDark;
-            loginA.Location = new Point(161, 180);
+            loginA.Location = new Point(230, 300);
+            loginA.Margin = new Padding(4, 5, 4, 5);
             loginA.Name = "loginA";
-            loginA.Size = new Size(60, 46);
+            loginA.Size = new Size(86, 77);
             loginA.TabIndex = 15;
             loginA.Text = "A";
             loginA.UseVisualStyleBackColor = false;
@@ -501,9 +538,10 @@ namespace FoodCityPOS
             // loginY
             // 
             loginY.BackColor = SystemColors.ControlDarkDark;
-            loginY.Location = new Point(453, 128);
+            loginY.Location = new Point(647, 213);
+            loginY.Margin = new Padding(4, 5, 4, 5);
             loginY.Name = "loginY";
-            loginY.Size = new Size(60, 46);
+            loginY.Size = new Size(86, 77);
             loginY.TabIndex = 14;
             loginY.Text = "Y";
             loginY.UseVisualStyleBackColor = false;
@@ -511,9 +549,10 @@ namespace FoodCityPOS
             // loginU
             // 
             loginU.BackColor = SystemColors.ControlDarkDark;
-            loginU.Location = new Point(519, 128);
+            loginU.Location = new Point(741, 213);
+            loginU.Margin = new Padding(4, 5, 4, 5);
             loginU.Name = "loginU";
-            loginU.Size = new Size(60, 46);
+            loginU.Size = new Size(86, 77);
             loginU.TabIndex = 13;
             loginU.Text = "U";
             loginU.UseVisualStyleBackColor = false;
@@ -521,9 +560,10 @@ namespace FoodCityPOS
             // loginI
             // 
             loginI.BackColor = SystemColors.ControlDarkDark;
-            loginI.Location = new Point(585, 128);
+            loginI.Location = new Point(836, 213);
+            loginI.Margin = new Padding(4, 5, 4, 5);
             loginI.Name = "loginI";
-            loginI.Size = new Size(60, 46);
+            loginI.Size = new Size(86, 77);
             loginI.TabIndex = 12;
             loginI.Text = "I";
             loginI.UseVisualStyleBackColor = false;
@@ -531,9 +571,10 @@ namespace FoodCityPOS
             // loginO
             // 
             loginO.BackColor = SystemColors.ControlDarkDark;
-            loginO.Location = new Point(651, 128);
+            loginO.Location = new Point(930, 213);
+            loginO.Margin = new Padding(4, 5, 4, 5);
             loginO.Name = "loginO";
-            loginO.Size = new Size(60, 46);
+            loginO.Size = new Size(86, 77);
             loginO.TabIndex = 11;
             loginO.Text = "O";
             loginO.UseVisualStyleBackColor = false;
@@ -541,9 +582,10 @@ namespace FoodCityPOS
             // loginP
             // 
             loginP.BackColor = SystemColors.ControlDarkDark;
-            loginP.Location = new Point(716, 128);
+            loginP.Location = new Point(1023, 213);
+            loginP.Margin = new Padding(4, 5, 4, 5);
             loginP.Name = "loginP";
-            loginP.Size = new Size(60, 46);
+            loginP.Size = new Size(86, 77);
             loginP.TabIndex = 10;
             loginP.Text = "P";
             loginP.UseVisualStyleBackColor = false;
@@ -560,27 +602,30 @@ namespace FoodCityPOS
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(loginBoxOne);
-            panel2.Location = new Point(1200, 51);
+            panel2.Location = new Point(1714, 85);
+            panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(256, 251);
+            panel2.Size = new Size(366, 418);
             panel2.TabIndex = 12;
             // 
             // invalidLoginMessage
             // 
             invalidLoginMessage.AutoSize = true;
             invalidLoginMessage.ForeColor = Color.Red;
-            invalidLoginMessage.Location = new Point(56, 215);
+            invalidLoginMessage.Location = new Point(80, 358);
+            invalidLoginMessage.Margin = new Padding(4, 0, 4, 0);
             invalidLoginMessage.Name = "invalidLoginMessage";
-            invalidLoginMessage.Size = new Size(144, 15);
+            invalidLoginMessage.Size = new Size(214, 25);
             invalidLoginMessage.TabIndex = 18;
             invalidLoginMessage.Text = "Login information invalid.";
             invalidLoginMessage.Visible = false;
             // 
             // button4
             // 
-            button4.Location = new Point(134, 170);
+            button4.Location = new Point(191, 283);
+            button4.Margin = new Padding(4, 5, 4, 5);
             button4.Name = "button4";
-            button4.Size = new Size(110, 32);
+            button4.Size = new Size(157, 53);
             button4.TabIndex = 17;
             button4.Text = "Punch";
             button4.UseVisualStyleBackColor = true;
@@ -592,9 +637,10 @@ namespace FoodCityPOS
             boxOneClear.FlatAppearance.BorderSize = 0;
             boxOneClear.FlatStyle = FlatStyle.Flat;
             boxOneClear.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            boxOneClear.Location = new Point(218, 59);
+            boxOneClear.Location = new Point(311, 98);
+            boxOneClear.Margin = new Padding(4, 5, 4, 5);
             boxOneClear.Name = "boxOneClear";
-            boxOneClear.Size = new Size(26, 23);
+            boxOneClear.Size = new Size(37, 38);
             boxOneClear.TabIndex = 1;
             boxOneClear.TabStop = false;
             boxOneClear.Text = "✖";
@@ -603,9 +649,10 @@ namespace FoodCityPOS
             // 
             // loginSend
             // 
-            loginSend.Location = new Point(12, 170);
+            loginSend.Location = new Point(17, 283);
+            loginSend.Margin = new Padding(4, 5, 4, 5);
             loginSend.Name = "loginSend";
-            loginSend.Size = new Size(116, 32);
+            loginSend.Size = new Size(166, 53);
             loginSend.TabIndex = 16;
             loginSend.Text = "Logon";
             loginSend.UseVisualStyleBackColor = true;
@@ -615,17 +662,19 @@ namespace FoodCityPOS
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label3.Location = new Point(3, 9);
+            label3.Location = new Point(4, 15);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(78, 15);
+            label3.Size = new Size(122, 25);
             label3.TabIndex = 15;
             label3.Text = "Login to POS";
             // 
             // boxTwoClear
             // 
-            boxTwoClear.Location = new Point(218, 103);
+            boxTwoClear.Location = new Point(311, 172);
+            boxTwoClear.Margin = new Padding(4, 5, 4, 5);
             boxTwoClear.Name = "boxTwoClear";
-            boxTwoClear.Size = new Size(26, 23);
+            boxTwoClear.Size = new Size(37, 38);
             boxTwoClear.TabIndex = 13;
             boxTwoClear.TabStop = false;
             boxTwoClear.Text = "✖";
@@ -634,55 +683,60 @@ namespace FoodCityPOS
             // 
             // loginBoxTwo
             // 
-            loginBoxTwo.Location = new Point(3, 103);
+            loginBoxTwo.Location = new Point(4, 172);
+            loginBoxTwo.Margin = new Padding(4, 5, 4, 5);
             loginBoxTwo.Name = "loginBoxTwo";
-            loginBoxTwo.Size = new Size(250, 23);
+            loginBoxTwo.Size = new Size(355, 31);
             loginBoxTwo.TabIndex = 14;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(3, 85);
+            label2.Location = new Point(4, 142);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(57, 15);
+            label2.Size = new Size(87, 25);
             label2.TabIndex = 3;
             label2.Text = "Password";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(3, 41);
+            label1.Location = new Point(4, 68);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(51, 15);
+            label1.Size = new Size(79, 25);
             label1.TabIndex = 2;
             label1.Text = "Login ID";
             // 
             // loginBoxOne
             // 
-            loginBoxOne.Location = new Point(3, 59);
+            loginBoxOne.Location = new Point(4, 98);
+            loginBoxOne.Margin = new Padding(4, 5, 4, 5);
             loginBoxOne.Name = "loginBoxOne";
-            loginBoxOne.Size = new Size(250, 23);
+            loginBoxOne.Size = new Size(355, 31);
             loginBoxOne.TabIndex = 0;
             // 
             // foodCityLogo
             // 
-            foodCityLogo.Location = new Point(335, 96);
+            foodCityLogo.Location = new Point(479, 160);
+            foodCityLogo.Margin = new Padding(4, 5, 4, 5);
             foodCityLogo.Name = "foodCityLogo";
-            foodCityLogo.Size = new Size(169, 177);
+            foodCityLogo.Size = new Size(241, 295);
             foodCityLogo.SizeMode = PictureBoxSizeMode.Zoom;
             foodCityLogo.TabIndex = 13;
             foodCityLogo.TabStop = false;
-            foodCityLogo.BackgroundImage = null;
             // 
             // Form1
             // 
-            this.AcceptButton = loginSend;
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AcceptButton = loginSend;
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1486, 652);
+            ClientSize = new Size(2123, 1087);
             Controls.Add(foodCityLogo);
             Controls.Add(panel1);
             Controls.Add(panel2);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Form1";
             Text = "Form1";
             panel1.ResumeLayout(false);

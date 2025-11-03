@@ -1,29 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Owner\\Desktop\\cs\\FoodCityPOS\\",
+  "WorkspaceRootPath": "C:\\Users\\icosm\\OneDrive\\Desktop\\FCU\\FoodCityPOS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|c:\\users\\owner\\desktop\\cs\\foodcitypos\\foodcitypos\\mainposform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|solutionrelative:foodcitypos\\mainposform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|c:\\users\\owner\\desktop\\cs\\foodcitypos\\foodcitypos\\mainposform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|solutionrelative:foodcitypos\\mainposform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|c:\\users\\owner\\desktop\\cs\\foodcitypos\\foodcitypos\\mainposform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|solutionrelative:foodcitypos\\mainposform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|c:\\users\\owner\\desktop\\cs\\foodcitypos\\foodcitypos\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|c:\\users\\icosm\\onedrive\\desktop\\fcu\\foodcitypos\\foodcitypos\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|solutionrelative:foodcitypos\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|c:\\users\\owner\\desktop\\cs\\foodcitypos\\foodcitypos\\possession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|c:\\users\\icosm\\onedrive\\desktop\\fcu\\foodcitypos\\foodcitypos\\mainposform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|solutionrelative:foodcitypos\\mainposform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|c:\\users\\icosm\\onedrive\\desktop\\fcu\\foodcitypos\\foodcitypos\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|solutionrelative:foodcitypos\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|c:\\users\\icosm\\onedrive\\desktop\\fcu\\foodcitypos\\foodcitypos\\mainposform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|solutionrelative:foodcitypos\\mainposform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|c:\\users\\icosm\\onedrive\\desktop\\fcu\\foodcitypos\\foodcitypos\\mainposform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|solutionrelative:foodcitypos\\mainposform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|c:\\users\\icosm\\onedrive\\desktop\\fcu\\foodcitypos\\foodcitypos\\possession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|solutionrelative:foodcitypos\\possession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|c:\\users\\owner\\desktop\\cs\\foodcitypos\\foodcitypos\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|c:\\users\\icosm\\onedrive\\desktop\\fcu\\foodcitypos\\foodcitypos\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{71231E0B-59E0-4CB7-A2AA-D73BBE4DC796}|FoodCityPOS\\FoodCityPOS.csproj|solutionrelative:foodcitypos\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -34,28 +38,39 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "item.cs",
-              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\cs\\FoodCityPOS\\FoodCityPOS\\item.cs",
-              "RelativeDocumentMoniker": "FoodCityPOS\\item.cs",
-              "ToolTip": "C:\\Users\\Owner\\Desktop\\cs\\FoodCityPOS\\FoodCityPOS\\item.cs",
-              "RelativeToolTip": "FoodCityPOS\\item.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\icosm\\OneDrive\\Desktop\\FCU\\FoodCityPOS\\FoodCityPOS\\LoginForm.cs",
+              "RelativeDocumentMoniker": "FoodCityPOS\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\icosm\\OneDrive\\Desktop\\FCU\\FoodCityPOS\\FoodCityPOS\\LoginForm.cs [Design]",
+              "RelativeToolTip": "FoodCityPOS\\LoginForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-01T06:43:57.529Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T20:12:08.046Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
+              "Title": "item.cs",
+              "DocumentMoniker": "C:\\Users\\icosm\\OneDrive\\Desktop\\FCU\\FoodCityPOS\\FoodCityPOS\\item.cs",
+              "RelativeDocumentMoniker": "FoodCityPOS\\item.cs",
+              "ToolTip": "C:\\Users\\icosm\\OneDrive\\Desktop\\FCU\\FoodCityPOS\\FoodCityPOS\\item.cs",
+              "RelativeToolTip": "FoodCityPOS\\item.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-01T06:43:57.529Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "MainPOSForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\cs\\FoodCityPOS\\FoodCityPOS\\MainPOSForm.cs",
+              "DocumentMoniker": "C:\\Users\\icosm\\OneDrive\\Desktop\\FCU\\FoodCityPOS\\FoodCityPOS\\MainPOSForm.cs",
               "RelativeDocumentMoniker": "FoodCityPOS\\MainPOSForm.cs",
-              "ToolTip": "C:\\Users\\Owner\\Desktop\\cs\\FoodCityPOS\\FoodCityPOS\\MainPOSForm.cs [Design]",
+              "ToolTip": "C:\\Users\\icosm\\OneDrive\\Desktop\\FCU\\FoodCityPOS\\FoodCityPOS\\MainPOSForm.cs [Design]",
               "RelativeToolTip": "FoodCityPOS\\MainPOSForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-01T04:40:32.203Z",
@@ -63,52 +78,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "POSSession.cs",
-              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\cs\\FoodCityPOS\\FoodCityPOS\\POSSession.cs",
+              "DocumentMoniker": "C:\\Users\\icosm\\OneDrive\\Desktop\\FCU\\FoodCityPOS\\FoodCityPOS\\POSSession.cs",
               "RelativeDocumentMoniker": "FoodCityPOS\\POSSession.cs",
-              "ToolTip": "C:\\Users\\Owner\\Desktop\\cs\\FoodCityPOS\\FoodCityPOS\\POSSession.cs",
+              "ToolTip": "C:\\Users\\icosm\\OneDrive\\Desktop\\FCU\\FoodCityPOS\\FoodCityPOS\\POSSession.cs",
               "RelativeToolTip": "FoodCityPOS\\POSSession.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T06:34:34.968Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T06:34:34.968Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "LoginForm.cs",
-              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\cs\\FoodCityPOS\\FoodCityPOS\\LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\icosm\\OneDrive\\Desktop\\FCU\\FoodCityPOS\\FoodCityPOS\\LoginForm.cs",
               "RelativeDocumentMoniker": "FoodCityPOS\\LoginForm.cs",
-              "ToolTip": "C:\\Users\\Owner\\Desktop\\cs\\FoodCityPOS\\FoodCityPOS\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\icosm\\OneDrive\\Desktop\\FCU\\FoodCityPOS\\FoodCityPOS\\LoginForm.cs",
               "RelativeToolTip": "FoodCityPOS\\LoginForm.cs",
-              "ViewState": "AgIAAHcAAAAAAAAAAAAiwJEAAAArAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-30T05:56:19.522Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MainPOSForm.cs",
-              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\cs\\FoodCityPOS\\FoodCityPOS\\MainPOSForm.cs",
+              "DocumentMoniker": "C:\\Users\\icosm\\OneDrive\\Desktop\\FCU\\FoodCityPOS\\FoodCityPOS\\MainPOSForm.cs",
               "RelativeDocumentMoniker": "FoodCityPOS\\MainPOSForm.cs",
-              "ToolTip": "C:\\Users\\Owner\\Desktop\\cs\\FoodCityPOS\\FoodCityPOS\\MainPOSForm.cs",
+              "ToolTip": "C:\\Users\\icosm\\OneDrive\\Desktop\\FCU\\FoodCityPOS\\FoodCityPOS\\MainPOSForm.cs",
               "RelativeToolTip": "FoodCityPOS\\MainPOSForm.cs",
               "ViewState": "AgIAABMAAAAAAAAAAIA6wCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T02:36:51.004Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-15T02:36:51.004Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainPOSForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Owner\\Desktop\\cs\\FoodCityPOS\\FoodCityPOS\\MainPOSForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\icosm\\OneDrive\\Desktop\\FCU\\FoodCityPOS\\FoodCityPOS\\MainPOSForm.Designer.cs",
               "RelativeDocumentMoniker": "FoodCityPOS\\MainPOSForm.Designer.cs",
-              "ToolTip": "C:\\Users\\Owner\\Desktop\\cs\\FoodCityPOS\\FoodCityPOS\\MainPOSForm.Designer.cs",
+              "ToolTip": "C:\\Users\\icosm\\OneDrive\\Desktop\\FCU\\FoodCityPOS\\FoodCityPOS\\MainPOSForm.Designer.cs",
               "RelativeToolTip": "FoodCityPOS\\MainPOSForm.Designer.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAC4AAAA9AAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-09T21:13:09.164Z",
               "EditorCaption": ""

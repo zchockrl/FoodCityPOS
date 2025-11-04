@@ -14,5 +14,8 @@ namespace FoodCityPOS
         public static List<Item> delayedVoids = new List<Item>();
 
         public static Item lastItem { get; set; }
+
+        public static string customerFirstName { get; set; }
+        public static string customerLastName { get; set; }
     }
 }

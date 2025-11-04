@@ -49,6 +49,9 @@ namespace FoodCityPOS
             buttonContainer.Width = (int)(this.ClientSize.Width * 0.15);
             buttonContainer.Height = this.ClientSize.Height - bottomPanel.Height;
             middleContainer.Width = (int)(this.ClientSize.Width * .85);
+            middleContainer.Height = (int)(this.ClientSize.Height * .43);
+
+            numberContainer.Size = new Size((int)(middleContainer.Width * 0.47), middleContainer.Height);
         }
 
 
@@ -77,6 +80,7 @@ namespace FoodCityPOS
             valuCardPresentStrip = new Panel();
             topPanelContainer = new Label();
             valuCardHolderInfo = new Panel();
+            textDisplay = new System.Windows.Forms.TextBox();
             customerDisplayPreface = new System.Windows.Forms.TextBox();
             customerNameDisplay = new System.Windows.Forms.TextBox();
             signOff = new System.Windows.Forms.Button();
@@ -95,12 +99,15 @@ namespace FoodCityPOS
             middleContainer = new Panel();
             numberContainer = new TableLayoutPanel();
             backspace = new System.Windows.Forms.Button();
+            orderTotalValuesContainer = new Panel();
+            orderItemDisplayContainer = new Panel();
             bottomPanel.SuspendLayout();
             valuCardPresentStrip.SuspendLayout();
             valuCardHolderInfo.SuspendLayout();
             buttonContainer.SuspendLayout();
             rightButtonLayout.SuspendLayout();
             bottomRowLayout.SuspendLayout();
+            middleContainer.SuspendLayout();
             numberContainer.SuspendLayout();
             SuspendLayout();
             // 
@@ -190,12 +197,25 @@ namespace FoodCityPOS
             // valuCardHolderInfo
             // 
             valuCardHolderInfo.BackColor = Color.PapayaWhip;
+            valuCardHolderInfo.Controls.Add(textDisplay);
             valuCardHolderInfo.Controls.Add(customerDisplayPreface);
             valuCardHolderInfo.Controls.Add(customerNameDisplay);
             valuCardHolderInfo.Location = new Point(0, 60);
             valuCardHolderInfo.Name = "valuCardHolderInfo";
             valuCardHolderInfo.Size = new Size(1212, 34);
             valuCardHolderInfo.TabIndex = 1;
+            // 
+            // textDisplay
+            // 
+            textDisplay.BackColor = Color.PapayaWhip;
+            textDisplay.BorderStyle = BorderStyle.None;
+            textDisplay.Font = new Font("Segoe UI", 16F);
+            textDisplay.Location = new Point(18, 0);
+            textDisplay.Margin = new Padding(0);
+            textDisplay.Name = "textDisplay";
+            textDisplay.Size = new Size(370, 29);
+            textDisplay.TabIndex = 2;
+            textDisplay.Text = "4011";
             // 
             // customerDisplayPreface
             // 
@@ -469,10 +489,11 @@ namespace FoodCityPOS
             // 
             // middleContainer
             // 
-            middleContainer.Location = new Point(0, 336);
+            middleContainer.Controls.Add(numberContainer);
+            middleContainer.Location = new Point(649, 336);
             middleContainer.Margin = new Padding(0);
             middleContainer.Name = "middleContainer";
-            middleContainer.Size = new Size(1212, 258);
+            middleContainer.Size = new Size(563, 258);
             middleContainer.TabIndex = 9;
             // 
             // numberContainer
@@ -483,39 +504,54 @@ namespace FoodCityPOS
             numberContainer.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             numberContainer.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             numberContainer.Controls.Add(backspace, 3, 0);
-            numberContainer.Location = new Point(637, 336);
+            numberContainer.Dock = DockStyle.Fill;
+            numberContainer.Location = new Point(0, 0);
+            numberContainer.Margin = new Padding(0);
             numberContainer.Name = "numberContainer";
             numberContainer.RowCount = 4;
             numberContainer.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             numberContainer.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             numberContainer.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             numberContainer.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            numberContainer.Size = new Size(575, 258);
+            numberContainer.Size = new Size(563, 258);
             numberContainer.TabIndex = 0;
-            numberContainer.Padding = new Padding(0);
-            numberContainer.Margin = new Padding(0);
-            numberContainer.CellBorderStyle = TableLayoutPanelCellBorderStyle.None;
             // 
             // backspace
             // 
             backspace.BackColor = Color.DimGray;
             backspace.Dock = DockStyle.Fill;
             backspace.Font = new Font("Segoe UI", 10F);
-            backspace.Location = new Point(429, 0);
+            backspace.Location = new Point(420, 0);
             backspace.Margin = new Padding(0);
             backspace.Name = "backspace";
-            backspace.Size = new Size(146, 64);
+            backspace.Size = new Size(143, 64);
             backspace.TabIndex = 0;
             backspace.Text = "BKSP";
             backspace.TextAlign = ContentAlignment.TopLeft;
             backspace.UseVisualStyleBackColor = false;
+            // 
+            // orderTotalValuesContainer
+            // 
+            orderTotalValuesContainer.Location = new Point(0, 336);
+            orderTotalValuesContainer.Margin = new Padding(0);
+            orderTotalValuesContainer.Name = "orderTotalValuesContainer";
+            orderTotalValuesContainer.Size = new Size(646, 258);
+            orderTotalValuesContainer.TabIndex = 10;
+            // 
+            // orderItemDisplayContainer
+            // 
+            orderItemDisplayContainer.Location = new Point(-1, 93);
+            orderItemDisplayContainer.Name = "orderItemDisplayContainer";
+            orderItemDisplayContainer.Size = new Size(1213, 243);
+            orderItemDisplayContainer.TabIndex = 11;
             // 
             // MainPOSForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1496, 614);
-            Controls.Add(numberContainer);
+            Controls.Add(orderItemDisplayContainer);
+            Controls.Add(orderTotalValuesContainer);
             Controls.Add(middleContainer);
             Controls.Add(valuCardHolderInfo);
             Controls.Add(valuCardPresentStrip);
@@ -533,6 +569,7 @@ namespace FoodCityPOS
             buttonContainer.ResumeLayout(false);
             rightButtonLayout.ResumeLayout(false);
             bottomRowLayout.ResumeLayout(false);
+            middleContainer.ResumeLayout(false);
             numberContainer.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -582,5 +619,8 @@ namespace FoodCityPOS
         private System.Windows.Forms.TextBox customerDisplayPreface;
         private TableLayoutPanel numberContainer;
         private System.Windows.Forms.Button backspace;
+        private System.Windows.Forms.TextBox textDisplay;
+        private Panel orderTotalValuesContainer;
+        private Panel orderItemDisplayContainer;
     }
 }

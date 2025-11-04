@@ -45,7 +45,6 @@ namespace FoodCityPOS
             POSSession.valuCardApplied = !POSSession.valuCardApplied;
             if (POSSession.valuCardApplied)
             {
-                valuCardPresentStrip.BackColor = Color.Red;
 
                 string connection = "server=localhost;user id=root;password=Bbs+Cp101422!_;database=fcupos;";
                 using (MySqlConnection conn = new MySqlConnection(connection))

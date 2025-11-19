@@ -99,24 +99,22 @@ namespace FoodCityPOS
         {
             string username = loginBoxOne.Text.Trim();
             string password = loginBoxTwo.Text;
-
-            string hashedInput;
-            using (var sha = System.Security.Cryptography.SHA256.Create())
-            {
-                byte[] bytes = sha.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
-                hashedInput = BitConverter.ToString(bytes).Replace("-", "").ToLower();
-            }
             string connection = "server=localhost;user id=root;password=Bbs+Cp101422!_;database=fcupos;";
             using (MySqlConnection conn = new MySqlConnection(connection))
             {
                 try
                 {
                     conn.Open();
-                    string query = "SELECT * FROM employees WHERE username = @username AND password = @password";
+                    string query = @"
+                    SELECT name, position 
+                    FROM employees 
+                    WHERE username = @username 
+                    AND password = SHA2(@password, 256)
+                    ";
                     using (MySqlCommand command = new MySqlCommand(query, conn))
                     {
                         command.Parameters.AddWithValue("@username", username);
-                        command.Parameters.AddWithValue("@password", hashedInput);
+                        command.Parameters.AddWithValue("@password", password);
 
                         using (MySqlDataReader reader = command.ExecuteReader())
                         {

@@ -101,22 +101,22 @@ namespace FoodCityPOS
             departmentLookup = new System.Windows.Forms.Button();
             bottomContainer = new Panel();
             numberContainer = new TableLayoutPanel();
+            posAtSign = new System.Windows.Forms.Button();
+            posOK = new System.Windows.Forms.Button();
+            posClear = new System.Windows.Forms.Button();
+            pos3 = new System.Windows.Forms.Button();
+            pos2 = new System.Windows.Forms.Button();
+            pos5 = new System.Windows.Forms.Button();
+            pos4 = new System.Windows.Forms.Button();
             backspace = new System.Windows.Forms.Button();
-            orderItemDisplayContainer = new Panel();
             pos9 = new System.Windows.Forms.Button();
             pos8 = new System.Windows.Forms.Button();
             pos7 = new System.Windows.Forms.Button();
             pos6 = new System.Windows.Forms.Button();
-            pos4 = new System.Windows.Forms.Button();
-            pos5 = new System.Windows.Forms.Button();
             pos1 = new System.Windows.Forms.Button();
             pos0 = new System.Windows.Forms.Button();
-            pos2 = new System.Windows.Forms.Button();
-            pos3 = new System.Windows.Forms.Button();
             pos00 = new System.Windows.Forms.Button();
-            posClear = new System.Windows.Forms.Button();
-            posOK = new System.Windows.Forms.Button();
-            posAtSign = new System.Windows.Forms.Button();
+            orderItemDisplayContainer = new Panel();
             bottomPanel.SuspendLayout();
             valuCardPresentStrip.SuspendLayout();
             valuCardHolderInfo.SuspendLayout();
@@ -544,6 +544,120 @@ namespace FoodCityPOS
             numberContainer.Size = new Size(519, 258);
             numberContainer.TabIndex = 0;
             // 
+            // posAtSign
+            // 
+            posAtSign.BackColor = Color.Goldenrod;
+            posAtSign.Dock = DockStyle.Fill;
+            posAtSign.FlatAppearance.BorderColor = Color.Gray;
+            posAtSign.FlatStyle = FlatStyle.Flat;
+            posAtSign.Font = new Font("Segoe UI", 16F);
+            posAtSign.ForeColor = Color.Red;
+            posAtSign.Location = new Point(258, 192);
+            posAtSign.Margin = new Padding(0);
+            posAtSign.Name = "posAtSign";
+            posAtSign.Size = new Size(149, 66);
+            posAtSign.TabIndex = 14;
+            posAtSign.Text = "@";
+            posAtSign.TextAlign = ContentAlignment.TopLeft;
+            posAtSign.UseVisualStyleBackColor = false;
+            // 
+            // posOK
+            // 
+            posOK.Dock = DockStyle.Fill;
+            posOK.Location = new Point(407, 128);
+            posOK.Margin = new Padding(0);
+            posOK.Name = "posOK";
+            numberContainer.SetRowSpan(posOK, 2);
+            posOK.Size = new Size(112, 130);
+            posOK.TabIndex = 13;
+            posOK.Text = "OK";
+            posOK.TextAlign = ContentAlignment.TopLeft;
+            posOK.UseVisualStyleBackColor = true;
+            posOK.BackColor = Color.DarkGreen;
+            posOK.ForeColor = Color.White;
+            posOK.FlatStyle = FlatStyle.Flat;
+            posOK.FlatAppearance.BorderSize = 0;
+            // 
+            // posClear
+            // 
+            posClear.Dock = DockStyle.Fill;
+            posClear.Location = new Point(407, 58);
+            posClear.Margin = new Padding(0);
+            posClear.Name = "posClear";
+            posClear.Size = new Size(112, 70);
+            posClear.TabIndex = 12;
+            posClear.Text = "CLEAR";
+            posClear.TextAlign = ContentAlignment.TopLeft;
+            posClear.UseVisualStyleBackColor = true;
+            posClear.BackColor = Color.Red;
+            posClear.ForeColor = Color.White;
+            posClear.FlatStyle = FlatStyle.Flat;
+            posClear.FlatAppearance.BorderSize = 0;
+            // 
+            // pos3
+            // 
+            pos3.BackColor = Color.LightGray;
+            pos3.Dock = DockStyle.Fill;
+            pos3.FlatAppearance.BorderColor = Color.Gray;
+            pos3.FlatStyle = FlatStyle.Flat;
+            pos3.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            pos3.Location = new Point(258, 128);
+            pos3.Margin = new Padding(0);
+            pos3.Name = "pos3";
+            pos3.Size = new Size(149, 64);
+            pos3.TabIndex = 10;
+            pos3.Text = "3";
+            pos3.TextAlign = ContentAlignment.TopLeft;
+            pos3.UseVisualStyleBackColor = false;
+            // 
+            // pos2
+            // 
+            pos2.BackColor = Color.LightGray;
+            pos2.Dock = DockStyle.Fill;
+            pos2.FlatAppearance.BorderColor = Color.Gray;
+            pos2.FlatStyle = FlatStyle.Flat;
+            pos2.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            pos2.Location = new Point(129, 128);
+            pos2.Margin = new Padding(0);
+            pos2.Name = "pos2";
+            pos2.Size = new Size(129, 64);
+            pos2.TabIndex = 9;
+            pos2.Text = "2";
+            pos2.TextAlign = ContentAlignment.TopLeft;
+            pos2.UseVisualStyleBackColor = false;
+            // 
+            // pos5
+            // 
+            pos5.BackColor = Color.LightGray;
+            pos5.Dock = DockStyle.Fill;
+            pos5.FlatAppearance.BorderColor = Color.Gray;
+            pos5.FlatStyle = FlatStyle.Flat;
+            pos5.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            pos5.Location = new Point(129, 58);
+            pos5.Margin = new Padding(0);
+            pos5.Name = "pos5";
+            pos5.Size = new Size(129, 70);
+            pos5.TabIndex = 6;
+            pos5.Text = "5";
+            pos5.TextAlign = ContentAlignment.TopLeft;
+            pos5.UseVisualStyleBackColor = false;
+            // 
+            // pos4
+            // 
+            pos4.BackColor = Color.LightGray;
+            pos4.Dock = DockStyle.Fill;
+            pos4.FlatAppearance.BorderColor = Color.Gray;
+            pos4.FlatStyle = FlatStyle.Flat;
+            pos4.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            pos4.Location = new Point(0, 58);
+            pos4.Margin = new Padding(0);
+            pos4.Name = "pos4";
+            pos4.Size = new Size(129, 70);
+            pos4.TabIndex = 5;
+            pos4.Text = "4";
+            pos4.TextAlign = ContentAlignment.TopLeft;
+            pos4.UseVisualStyleBackColor = false;
+            // 
             // backspace
             // 
             backspace.BackColor = Color.DimGray;
@@ -557,6 +671,121 @@ namespace FoodCityPOS
             backspace.Text = "BKSP";
             backspace.TextAlign = ContentAlignment.TopLeft;
             backspace.UseVisualStyleBackColor = false;
+            backspace.ForeColor = Color.White;
+            backspace.FlatStyle = FlatStyle.Flat;
+            backspace.FlatAppearance.BorderSize = 0;
+            // 
+            // pos9
+            // 
+            pos9.BackColor = Color.LightGray;
+            pos9.Dock = DockStyle.Fill;
+            pos9.FlatAppearance.BorderColor = Color.Gray;
+            pos9.FlatStyle = FlatStyle.Flat;
+            pos9.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            pos9.Location = new Point(258, 0);
+            pos9.Margin = new Padding(0);
+            pos9.Name = "pos9";
+            pos9.Size = new Size(149, 58);
+            pos9.TabIndex = 1;
+            pos9.Text = "9";
+            pos9.TextAlign = ContentAlignment.TopLeft;
+            pos9.UseVisualStyleBackColor = false;
+            // 
+            // pos8
+            // 
+            pos8.BackColor = Color.LightGray;
+            pos8.Dock = DockStyle.Fill;
+            pos8.FlatAppearance.BorderColor = Color.Gray;
+            pos8.FlatStyle = FlatStyle.Flat;
+            pos8.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            pos8.Location = new Point(129, 0);
+            pos8.Margin = new Padding(0);
+            pos8.Name = "pos8";
+            pos8.Size = new Size(129, 58);
+            pos8.TabIndex = 2;
+            pos8.Text = "8";
+            pos8.TextAlign = ContentAlignment.TopLeft;
+            pos8.UseVisualStyleBackColor = false;
+            // 
+            // pos7
+            // 
+            pos7.BackColor = Color.LightGray;
+            pos7.Dock = DockStyle.Fill;
+            pos7.FlatAppearance.BorderColor = Color.Gray;
+            pos7.FlatStyle = FlatStyle.Flat;
+            pos7.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            pos7.Location = new Point(0, 0);
+            pos7.Margin = new Padding(0);
+            pos7.Name = "pos7";
+            pos7.Size = new Size(129, 58);
+            pos7.TabIndex = 3;
+            pos7.Text = "7";
+            pos7.TextAlign = ContentAlignment.TopLeft;
+            pos7.UseVisualStyleBackColor = false;
+            // 
+            // pos6
+            // 
+            pos6.BackColor = Color.LightGray;
+            pos6.Dock = DockStyle.Fill;
+            pos6.FlatAppearance.BorderColor = Color.Gray;
+            pos6.FlatStyle = FlatStyle.Flat;
+            pos6.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            pos6.Location = new Point(258, 58);
+            pos6.Margin = new Padding(0);
+            pos6.Name = "pos6";
+            pos6.Size = new Size(149, 70);
+            pos6.TabIndex = 4;
+            pos6.Text = "6";
+            pos6.TextAlign = ContentAlignment.TopLeft;
+            pos6.UseVisualStyleBackColor = false;
+            // 
+            // pos1
+            // 
+            pos1.BackColor = Color.LightGray;
+            pos1.Dock = DockStyle.Fill;
+            pos1.FlatAppearance.BorderColor = Color.Gray;
+            pos1.FlatStyle = FlatStyle.Flat;
+            pos1.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            pos1.Location = new Point(0, 128);
+            pos1.Margin = new Padding(0);
+            pos1.Name = "pos1";
+            pos1.Size = new Size(129, 64);
+            pos1.TabIndex = 7;
+            pos1.Text = "1";
+            pos1.TextAlign = ContentAlignment.TopLeft;
+            pos1.UseVisualStyleBackColor = false;
+            // 
+            // pos0
+            // 
+            pos0.BackColor = Color.LightGray;
+            pos0.Dock = DockStyle.Fill;
+            pos0.FlatAppearance.BorderColor = Color.Gray;
+            pos0.FlatStyle = FlatStyle.Flat;
+            pos0.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            pos0.Location = new Point(0, 192);
+            pos0.Margin = new Padding(0);
+            pos0.Name = "pos0";
+            pos0.Size = new Size(129, 66);
+            pos0.TabIndex = 8;
+            pos0.Text = "0";
+            pos0.TextAlign = ContentAlignment.TopLeft;
+            pos0.UseVisualStyleBackColor = false;
+            // 
+            // pos00
+            // 
+            pos00.BackColor = Color.LightGray;
+            pos00.Dock = DockStyle.Fill;
+            pos00.FlatAppearance.BorderColor = Color.Gray;
+            pos00.FlatStyle = FlatStyle.Flat;
+            pos00.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            pos00.Location = new Point(129, 192);
+            pos00.Margin = new Padding(0);
+            pos00.Name = "pos00";
+            pos00.Size = new Size(129, 66);
+            pos00.TabIndex = 11;
+            pos00.Text = "00";
+            pos00.TextAlign = ContentAlignment.TopLeft;
+            pos00.UseVisualStyleBackColor = false;
             // 
             // orderItemDisplayContainer
             // 
@@ -564,133 +793,6 @@ namespace FoodCityPOS
             orderItemDisplayContainer.Name = "orderItemDisplayContainer";
             orderItemDisplayContainer.Size = new Size(1213, 243);
             orderItemDisplayContainer.TabIndex = 11;
-            // 
-            // pos9
-            // 
-            pos9.Location = new Point(261, 3);
-            pos9.Name = "pos9";
-            pos9.Size = new Size(143, 52);
-            pos9.TabIndex = 1;
-            pos9.Text = "9";
-            pos9.UseVisualStyleBackColor = true;
-            // 
-            // pos8
-            // 
-            pos8.Location = new Point(132, 3);
-            pos8.Name = "pos8";
-            pos8.Size = new Size(123, 52);
-            pos8.TabIndex = 2;
-            pos8.Text = "8";
-            pos8.UseVisualStyleBackColor = true;
-            // 
-            // pos7
-            // 
-            pos7.Location = new Point(3, 3);
-            pos7.Name = "pos7";
-            pos7.Size = new Size(123, 52);
-            pos7.TabIndex = 3;
-            pos7.Text = "7";
-            pos7.UseVisualStyleBackColor = true;
-            // 
-            // pos6
-            // 
-            pos6.Location = new Point(261, 61);
-            pos6.Name = "pos6";
-            pos6.Size = new Size(143, 63);
-            pos6.TabIndex = 4;
-            pos6.Text = "6";
-            pos6.UseVisualStyleBackColor = true;
-            // 
-            // pos4
-            // 
-            pos4.Location = new Point(3, 61);
-            pos4.Name = "pos4";
-            pos4.Size = new Size(123, 63);
-            pos4.TabIndex = 5;
-            pos4.Text = "4";
-            pos4.UseVisualStyleBackColor = true;
-            // 
-            // pos5
-            // 
-            pos5.Location = new Point(132, 61);
-            pos5.Name = "pos5";
-            pos5.Size = new Size(123, 63);
-            pos5.TabIndex = 6;
-            pos5.Text = "5";
-            pos5.UseVisualStyleBackColor = true;
-            // 
-            // pos1
-            // 
-            pos1.Location = new Point(3, 131);
-            pos1.Name = "pos1";
-            pos1.Size = new Size(123, 58);
-            pos1.TabIndex = 7;
-            pos1.Text = "1";
-            pos1.UseVisualStyleBackColor = true;
-            // 
-            // pos0
-            // 
-            pos0.Location = new Point(3, 195);
-            pos0.Name = "pos0";
-            pos0.Size = new Size(123, 60);
-            pos0.TabIndex = 8;
-            pos0.Text = "0";
-            pos0.UseVisualStyleBackColor = true;
-            // 
-            // pos2
-            // 
-            pos2.Location = new Point(132, 131);
-            pos2.Name = "pos2";
-            pos2.Size = new Size(123, 58);
-            pos2.TabIndex = 9;
-            pos2.Text = "2";
-            pos2.UseVisualStyleBackColor = true;
-            // 
-            // pos3
-            // 
-            pos3.Location = new Point(261, 131);
-            pos3.Name = "pos3";
-            pos3.Size = new Size(143, 58);
-            pos3.TabIndex = 10;
-            pos3.Text = "3";
-            pos3.UseVisualStyleBackColor = true;
-            // 
-            // pos00
-            // 
-            pos00.Location = new Point(132, 195);
-            pos00.Name = "pos00";
-            pos00.Size = new Size(123, 60);
-            pos00.TabIndex = 11;
-            pos00.Text = "00";
-            pos00.UseVisualStyleBackColor = true;
-            // 
-            // posClear
-            // 
-            posClear.Location = new Point(410, 61);
-            posClear.Name = "posClear";
-            posClear.Size = new Size(106, 63);
-            posClear.TabIndex = 12;
-            posClear.Text = "CLEAR";
-            posClear.UseVisualStyleBackColor = true;
-            // 
-            // posOK
-            // 
-            posOK.Location = new Point(410, 131);
-            posOK.Name = "posOK";
-            numberContainer.SetRowSpan(posOK, 2);
-            posOK.Size = new Size(106, 124);
-            posOK.TabIndex = 13;
-            posOK.Text = "OK";
-            posOK.UseVisualStyleBackColor = true;
-            // 
-            // posAtSign
-            // 
-            posAtSign.Location = new Point(261, 195);
-            posAtSign.Name = "posAtSign";
-            posAtSign.Size = new Size(143, 60);
-            posAtSign.TabIndex = 14;
-            posAtSign.Text = "@";
-            posAtSign.UseVisualStyleBackColor = true;
             // 
             // MainPOSForm
             // 

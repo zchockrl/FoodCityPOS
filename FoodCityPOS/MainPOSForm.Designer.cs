@@ -8,8 +8,7 @@ namespace FoodCityPOS
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
-
+        
 
         /// <summary>
         /// Clean up any resources being used.
@@ -100,6 +99,8 @@ namespace FoodCityPOS
             itemSearch = new System.Windows.Forms.Button();
             departmentLookup = new System.Windows.Forms.Button();
             bottomContainer = new Panel();
+            orderTotalsContainer = new TableLayoutPanel();
+            subtotalString = new Label();
             numberContainer = new TableLayoutPanel();
             posAtSign = new System.Windows.Forms.Button();
             posOK = new System.Windows.Forms.Button();
@@ -117,6 +118,9 @@ namespace FoodCityPOS
             pos0 = new System.Windows.Forms.Button();
             pos00 = new System.Windows.Forms.Button();
             orderItemDisplayContainer = new Panel();
+            taxString = new Label();
+            totalString = new Label();
+            tenderedString = new Label();
             bottomPanel.SuspendLayout();
             valuCardPresentStrip.SuspendLayout();
             valuCardHolderInfo.SuspendLayout();
@@ -124,6 +128,7 @@ namespace FoodCityPOS
             rightButtonLayout.SuspendLayout();
             bottomRowLayout.SuspendLayout();
             bottomContainer.SuspendLayout();
+            orderTotalsContainer.SuspendLayout();
             numberContainer.SuspendLayout();
             SuspendLayout();
             // 
@@ -502,6 +507,7 @@ namespace FoodCityPOS
             // 
             // bottomContainer
             // 
+            bottomContainer.Controls.Add(orderTotalsContainer);
             bottomContainer.Controls.Add(numberContainer);
             bottomContainer.Dock = DockStyle.Bottom;
             bottomContainer.Location = new Point(0, 336);
@@ -509,6 +515,41 @@ namespace FoodCityPOS
             bottomContainer.Name = "bottomContainer";
             bottomContainer.Size = new Size(1212, 258);
             bottomContainer.TabIndex = 9;
+            // 
+            // orderTotalsContainer
+            // 
+            orderTotalsContainer.BackColor = Color.Teal;
+            orderTotalsContainer.ColumnCount = 1;
+            orderTotalsContainer.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            orderTotalsContainer.Controls.Add(tenderedString, 0, 3);
+            orderTotalsContainer.Controls.Add(totalString, 0, 2);
+            orderTotalsContainer.Controls.Add(taxString, 0, 1);
+            orderTotalsContainer.Controls.Add(subtotalString, 0, 0);
+            orderTotalsContainer.Dock = DockStyle.Left;
+            orderTotalsContainer.Location = new Point(0, 0);
+            orderTotalsContainer.Margin = new Padding(0);
+            orderTotalsContainer.Name = "orderTotalsContainer";
+            orderTotalsContainer.RowCount = 5;
+            orderTotalsContainer.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            orderTotalsContainer.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            orderTotalsContainer.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            orderTotalsContainer.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            orderTotalsContainer.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            orderTotalsContainer.Size = new Size(693, 258);
+            orderTotalsContainer.TabIndex = 1;
+            // 
+            // subtotalString
+            // 
+            subtotalString.Anchor = AnchorStyles.Left;
+            subtotalString.AutoSize = true;
+            subtotalString.Font = new Font("Segoe UI", 20F);
+            subtotalString.ForeColor = Color.White;
+            subtotalString.Location = new Point(3, 2);
+            subtotalString.Name = "subtotalString";
+            subtotalString.Padding = new Padding(10, 5, 10, 5);
+            subtotalString.Size = new Size(137, 47);
+            subtotalString.TabIndex = 0;
+            subtotalString.Text = "Subtotal";
             // 
             // numberContainer
             // 
@@ -563,7 +604,11 @@ namespace FoodCityPOS
             // 
             // posOK
             // 
+            posOK.BackColor = Color.DarkGreen;
             posOK.Dock = DockStyle.Fill;
+            posOK.FlatAppearance.BorderSize = 0;
+            posOK.FlatStyle = FlatStyle.Flat;
+            posOK.ForeColor = Color.White;
             posOK.Location = new Point(407, 128);
             posOK.Margin = new Padding(0);
             posOK.Name = "posOK";
@@ -572,15 +617,15 @@ namespace FoodCityPOS
             posOK.TabIndex = 13;
             posOK.Text = "OK";
             posOK.TextAlign = ContentAlignment.TopLeft;
-            posOK.UseVisualStyleBackColor = true;
-            posOK.BackColor = Color.DarkGreen;
-            posOK.ForeColor = Color.White;
-            posOK.FlatStyle = FlatStyle.Flat;
-            posOK.FlatAppearance.BorderSize = 0;
+            posOK.UseVisualStyleBackColor = false;
             // 
             // posClear
             // 
+            posClear.BackColor = Color.Red;
             posClear.Dock = DockStyle.Fill;
+            posClear.FlatAppearance.BorderSize = 0;
+            posClear.FlatStyle = FlatStyle.Flat;
+            posClear.ForeColor = Color.White;
             posClear.Location = new Point(407, 58);
             posClear.Margin = new Padding(0);
             posClear.Name = "posClear";
@@ -588,11 +633,7 @@ namespace FoodCityPOS
             posClear.TabIndex = 12;
             posClear.Text = "CLEAR";
             posClear.TextAlign = ContentAlignment.TopLeft;
-            posClear.UseVisualStyleBackColor = true;
-            posClear.BackColor = Color.Red;
-            posClear.ForeColor = Color.White;
-            posClear.FlatStyle = FlatStyle.Flat;
-            posClear.FlatAppearance.BorderSize = 0;
+            posClear.UseVisualStyleBackColor = false;
             // 
             // pos3
             // 
@@ -662,7 +703,10 @@ namespace FoodCityPOS
             // 
             backspace.BackColor = Color.DimGray;
             backspace.Dock = DockStyle.Fill;
+            backspace.FlatAppearance.BorderSize = 0;
+            backspace.FlatStyle = FlatStyle.Flat;
             backspace.Font = new Font("Segoe UI", 10F);
+            backspace.ForeColor = Color.White;
             backspace.Location = new Point(407, 0);
             backspace.Margin = new Padding(0);
             backspace.Name = "backspace";
@@ -671,9 +715,6 @@ namespace FoodCityPOS
             backspace.Text = "BKSP";
             backspace.TextAlign = ContentAlignment.TopLeft;
             backspace.UseVisualStyleBackColor = false;
-            backspace.ForeColor = Color.White;
-            backspace.FlatStyle = FlatStyle.Flat;
-            backspace.FlatAppearance.BorderSize = 0;
             // 
             // pos9
             // 
@@ -794,6 +835,45 @@ namespace FoodCityPOS
             orderItemDisplayContainer.Size = new Size(1213, 243);
             orderItemDisplayContainer.TabIndex = 11;
             // 
+            // taxString
+            // 
+            taxString.Anchor = AnchorStyles.Left;
+            taxString.AutoSize = true;
+            taxString.Font = new Font("Segoe UI", 20F);
+            taxString.ForeColor = Color.White;
+            taxString.Location = new Point(3, 53);
+            taxString.Name = "taxString";
+            taxString.Padding = new Padding(10, 5, 10, 5);
+            taxString.Size = new Size(74, 47);
+            taxString.TabIndex = 1;
+            taxString.Text = "Tax";
+            // 
+            // totalString
+            // 
+            totalString.Anchor = AnchorStyles.Left;
+            totalString.AutoSize = true;
+            totalString.Font = new Font("Segoe UI", 20F);
+            totalString.ForeColor = Color.White;
+            totalString.Location = new Point(3, 104);
+            totalString.Name = "totalString";
+            totalString.Padding = new Padding(10, 5, 10, 5);
+            totalString.Size = new Size(149, 47);
+            totalString.TabIndex = 2;
+            totalString.Text = "Total Due";
+            // 
+            // tenderedString
+            // 
+            tenderedString.Anchor = AnchorStyles.Left;
+            tenderedString.AutoSize = true;
+            tenderedString.Font = new Font("Segoe UI", 20F);
+            tenderedString.ForeColor = Color.White;
+            tenderedString.Location = new Point(3, 155);
+            tenderedString.Name = "tenderedString";
+            tenderedString.Padding = new Padding(10, 5, 10, 5);
+            tenderedString.Size = new Size(146, 47);
+            tenderedString.TabIndex = 3;
+            tenderedString.Text = "Tendered";
+            // 
             // MainPOSForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -818,6 +898,8 @@ namespace FoodCityPOS
             rightButtonLayout.ResumeLayout(false);
             bottomRowLayout.ResumeLayout(false);
             bottomContainer.ResumeLayout(false);
+            orderTotalsContainer.ResumeLayout(false);
+            orderTotalsContainer.PerformLayout();
             numberContainer.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -883,5 +965,10 @@ namespace FoodCityPOS
         private System.Windows.Forms.Button pos1;
         private System.Windows.Forms.Button pos0;
         private System.Windows.Forms.Button pos00;
+        private TableLayoutPanel orderTotalsContainer;
+        private Label subtotalString;
+        private Label tenderedString;
+        private Label totalString;
+        private Label taxString;
     }
 }

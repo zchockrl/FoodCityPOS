@@ -17,5 +17,13 @@ namespace FoodCityPOS
 
         public static string customerFirstName { get; set; }
         public static string customerLastName { get; set; }
+
+        public double subtotal { get; set; }
+
+        public double tax { get; set; }
+
+        public double total { get; set; }
+
+        public double tendered { get; set; }
     }
 }

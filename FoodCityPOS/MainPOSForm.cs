@@ -42,7 +42,7 @@ namespace FoodCityPOS
 
         private void customerLookup_Click(object sender, EventArgs e)
         {
-            POSSession.valuCardApplied = !POSSession.valuCardApplied;
+            POSSession.valuCardApplied = true;
             if (POSSession.valuCardApplied)
             {
 

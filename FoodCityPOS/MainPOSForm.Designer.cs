@@ -28,6 +28,7 @@ namespace FoodCityPOS
         public MainPOSForm(string username, string position)
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
             name = username;
             Uposition = position;
             nameOfUser.Text = name;
@@ -42,6 +43,16 @@ namespace FoodCityPOS
 
         private void MainPOSForm_Resize(object sender, EventArgs e)
         {
+            this.SuspendLayout();
+            valuCardPresentStrip.SuspendLayout();
+            valuCardHolderInfo.SuspendLayout();
+            bottomPanel.SuspendLayout();
+            buttonContainer.SuspendLayout();
+            bottomContainer.SuspendLayout();
+            numberContainer.SuspendLayout();
+            orderItemDisplayContainer.SuspendLayout();
+            orderTotalsContainer.SuspendLayout();
+
             valuCardPresentStrip.Width = (int)(this.ClientSize.Width * 0.85);
             valuCardHolderInfo.Width = (int)(this.ClientSize.Width * 0.85);
             bottomPanel.Width = this.ClientSize.Width;
@@ -54,6 +65,19 @@ namespace FoodCityPOS
 
             orderItemDisplayContainer.Width = (int)(this.ClientSize.Width * .85);
             orderItemDisplayContainer.Height = (int)(this.ClientSize.Height * .4084);
+
+            orderTotalsContainer.Width = (int)(this.ClientSize.Width * .451);
+            orderTotalsContainer.Height = (int)(this.ClientSize.Width * .4107);
+
+            this.ResumeLayout();
+            valuCardPresentStrip.ResumeLayout();
+            valuCardHolderInfo.ResumeLayout();
+            bottomPanel.ResumeLayout();
+            buttonContainer.ResumeLayout();
+            bottomContainer.ResumeLayout();
+            numberContainer.ResumeLayout();
+            orderItemDisplayContainer.ResumeLayout();
+            orderTotalsContainer.ResumeLayout();
         }
 
 
@@ -100,6 +124,9 @@ namespace FoodCityPOS
             departmentLookup = new System.Windows.Forms.Button();
             bottomContainer = new Panel();
             orderTotalsContainer = new TableLayoutPanel();
+            tenderedString = new Label();
+            totalString = new Label();
+            taxString = new Label();
             subtotalString = new Label();
             numberContainer = new TableLayoutPanel();
             posAtSign = new System.Windows.Forms.Button();
@@ -118,9 +145,6 @@ namespace FoodCityPOS
             pos0 = new System.Windows.Forms.Button();
             pos00 = new System.Windows.Forms.Button();
             orderItemDisplayContainer = new Panel();
-            taxString = new Label();
-            totalString = new Label();
-            tenderedString = new Label();
             bottomPanel.SuspendLayout();
             valuCardPresentStrip.SuspendLayout();
             valuCardHolderInfo.SuspendLayout();
@@ -276,7 +300,7 @@ namespace FoodCityPOS
             signOff.Location = new Point(0, 0);
             signOff.Margin = new Padding(0);
             signOff.Name = "signOff";
-            signOff.Size = new Size(198, 124);
+            signOff.Size = new Size(198, 127);
             signOff.TabIndex = 0;
             signOff.TabStop = false;
             signOff.Text = "SIGN\r\nOFF";
@@ -313,12 +337,12 @@ namespace FoodCityPOS
             rightButtonLayout.Location = new Point(0, 0);
             rightButtonLayout.Name = "rightButtonLayout";
             rightButtonLayout.RowCount = 6;
-            rightButtonLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 21F));
-            rightButtonLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            rightButtonLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 8F));
-            rightButtonLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 8F));
-            rightButtonLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 21F));
-            rightButtonLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 22F));
+            rightButtonLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 21.5F));
+            rightButtonLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 21.5F));
+            rightButtonLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 7F));
+            rightButtonLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 7F));
+            rightButtonLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 21.5F));
+            rightButtonLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 21.5F));
             rightButtonLayout.Size = new Size(284, 594);
             rightButtonLayout.TabIndex = 0;
             // 
@@ -331,12 +355,12 @@ namespace FoodCityPOS
             bottomRowLayout.Controls.Add(total, 1, 0);
             bottomRowLayout.Controls.Add(enterItem, 0, 0);
             bottomRowLayout.Dock = DockStyle.Fill;
-            bottomRowLayout.Location = new Point(0, 460);
+            bottomRowLayout.Location = new Point(0, 463);
             bottomRowLayout.Margin = new Padding(0);
             bottomRowLayout.Name = "bottomRowLayout";
             bottomRowLayout.RowCount = 1;
             bottomRowLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            bottomRowLayout.Size = new Size(284, 134);
+            bottomRowLayout.Size = new Size(284, 131);
             bottomRowLayout.TabIndex = 10;
             // 
             // total
@@ -351,7 +375,7 @@ namespace FoodCityPOS
             total.Location = new Point(113, 0);
             total.Margin = new Padding(0);
             total.Name = "total";
-            total.Size = new Size(171, 134);
+            total.Size = new Size(171, 131);
             total.TabIndex = 10;
             total.TabStop = false;
             total.Text = "TOTAL";
@@ -370,7 +394,7 @@ namespace FoodCityPOS
             enterItem.Location = new Point(0, 0);
             enterItem.Margin = new Padding(0);
             enterItem.Name = "enterItem";
-            enterItem.Size = new Size(113, 134);
+            enterItem.Size = new Size(113, 131);
             enterItem.TabIndex = 8;
             enterItem.Text = "ENTER\r\nITEM";
             enterItem.TextAlign = ContentAlignment.TopLeft;
@@ -386,7 +410,7 @@ namespace FoodCityPOS
             bakeryDeliMenu.Location = new Point(198, 0);
             bakeryDeliMenu.Margin = new Padding(0);
             bakeryDeliMenu.Name = "bakeryDeliMenu";
-            bakeryDeliMenu.Size = new Size(86, 124);
+            bakeryDeliMenu.Size = new Size(86, 127);
             bakeryDeliMenu.TabIndex = 1;
             bakeryDeliMenu.TabStop = false;
             bakeryDeliMenu.Text = "BAKERY\r\nDELI\r\nMENU";
@@ -405,7 +429,7 @@ namespace FoodCityPOS
             voidMenu.Location = new Point(198, 336);
             voidMenu.Margin = new Padding(0);
             voidMenu.Name = "voidMenu";
-            voidMenu.Size = new Size(86, 124);
+            voidMenu.Size = new Size(86, 127);
             voidMenu.TabIndex = 7;
             voidMenu.Text = "VOID\r\nMENU";
             voidMenu.TextAlign = ContentAlignment.TopLeft;
@@ -422,10 +446,10 @@ namespace FoodCityPOS
             produceMenu.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             produceMenu.ForeColor = Color.White;
             produceMenu.ImageAlign = ContentAlignment.TopLeft;
-            produceMenu.Location = new Point(0, 289);
+            produceMenu.Location = new Point(0, 295);
             produceMenu.Margin = new Padding(0);
             produceMenu.Name = "produceMenu";
-            produceMenu.Size = new Size(284, 47);
+            produceMenu.Size = new Size(284, 41);
             produceMenu.TabIndex = 5;
             produceMenu.TabStop = false;
             produceMenu.Text = "PRODUCE MENU";
@@ -440,10 +464,10 @@ namespace FoodCityPOS
             customerLookup.FlatStyle = FlatStyle.Flat;
             customerLookup.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             customerLookup.ForeColor = Color.White;
-            customerLookup.Location = new Point(0, 124);
+            customerLookup.Location = new Point(0, 127);
             customerLookup.Margin = new Padding(0);
             customerLookup.Name = "customerLookup";
-            customerLookup.Size = new Size(198, 118);
+            customerLookup.Size = new Size(198, 127);
             customerLookup.TabIndex = 2;
             customerLookup.TabStop = false;
             customerLookup.Text = "CUSTOMER\r\nLOOKUP";
@@ -462,7 +486,7 @@ namespace FoodCityPOS
             posMenu.Location = new Point(0, 336);
             posMenu.Margin = new Padding(0);
             posMenu.Name = "posMenu";
-            posMenu.Size = new Size(198, 124);
+            posMenu.Size = new Size(198, 127);
             posMenu.TabIndex = 6;
             posMenu.TabStop = false;
             posMenu.Text = "POS\r\nMENU";
@@ -477,10 +501,10 @@ namespace FoodCityPOS
             itemSearch.FlatStyle = FlatStyle.Flat;
             itemSearch.Font = new Font("Segoe UI", 11.2F, FontStyle.Bold);
             itemSearch.ForeColor = Color.White;
-            itemSearch.Location = new Point(198, 124);
+            itemSearch.Location = new Point(198, 127);
             itemSearch.Margin = new Padding(0);
             itemSearch.Name = "itemSearch";
-            itemSearch.Size = new Size(86, 118);
+            itemSearch.Size = new Size(86, 127);
             itemSearch.TabIndex = 3;
             itemSearch.Text = "ITEM\r\nSEARCH";
             itemSearch.TextAlign = ContentAlignment.TopLeft;
@@ -495,10 +519,10 @@ namespace FoodCityPOS
             departmentLookup.FlatStyle = FlatStyle.Flat;
             departmentLookup.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             departmentLookup.ImageAlign = ContentAlignment.TopLeft;
-            departmentLookup.Location = new Point(0, 242);
+            departmentLookup.Location = new Point(0, 254);
             departmentLookup.Margin = new Padding(0);
             departmentLookup.Name = "departmentLookup";
-            departmentLookup.Size = new Size(284, 47);
+            departmentLookup.Size = new Size(284, 41);
             departmentLookup.TabIndex = 4;
             departmentLookup.TabStop = false;
             departmentLookup.Text = "DEPARTMENTS";
@@ -519,6 +543,7 @@ namespace FoodCityPOS
             // orderTotalsContainer
             // 
             orderTotalsContainer.BackColor = Color.Teal;
+            orderTotalsContainer.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
             orderTotalsContainer.ColumnCount = 1;
             orderTotalsContainer.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             orderTotalsContainer.Controls.Add(tenderedString, 0, 3);
@@ -538,13 +563,53 @@ namespace FoodCityPOS
             orderTotalsContainer.Size = new Size(693, 258);
             orderTotalsContainer.TabIndex = 1;
             // 
+            // tenderedString
+            // 
+            tenderedString.Anchor = AnchorStyles.Left;
+            tenderedString.AutoSize = true;
+            tenderedString.Font = new Font("Segoe UI", 20F);
+            tenderedString.ForeColor = Color.White;
+            tenderedString.Location = new Point(4, 155);
+            tenderedString.Name = "tenderedString";
+            tenderedString.Padding = new Padding(10, 5, 10, 5);
+            tenderedString.Size = new Size(146, 47);
+            tenderedString.TabIndex = 3;
+            tenderedString.Text = "Tendered";
+            // 
+            // totalString
+            // 
+            totalString.AutoSize = true;
+            totalString.BackColor = Color.Green;
+            totalString.Dock = DockStyle.Fill;
+            totalString.Font = new Font("Segoe UI", 20F);
+            totalString.ForeColor = Color.White;
+            totalString.Location = new Point(4, 103);
+            totalString.Name = "totalString";
+            totalString.Padding = new Padding(10, 5, 10, 5);
+            totalString.Size = new Size(685, 50);
+            totalString.TabIndex = 2;
+            totalString.Text = "Total Due";
+            // 
+            // taxString
+            // 
+            taxString.Anchor = AnchorStyles.Left;
+            taxString.AutoSize = true;
+            taxString.Font = new Font("Segoe UI", 20F);
+            taxString.ForeColor = Color.White;
+            taxString.Location = new Point(4, 53);
+            taxString.Name = "taxString";
+            taxString.Padding = new Padding(10, 5, 10, 5);
+            taxString.Size = new Size(74, 47);
+            taxString.TabIndex = 1;
+            taxString.Text = "Tax";
+            // 
             // subtotalString
             // 
             subtotalString.Anchor = AnchorStyles.Left;
             subtotalString.AutoSize = true;
             subtotalString.Font = new Font("Segoe UI", 20F);
             subtotalString.ForeColor = Color.White;
-            subtotalString.Location = new Point(3, 2);
+            subtotalString.Location = new Point(4, 2);
             subtotalString.Name = "subtotalString";
             subtotalString.Padding = new Padding(10, 5, 10, 5);
             subtotalString.Size = new Size(137, 47);
@@ -834,45 +899,6 @@ namespace FoodCityPOS
             orderItemDisplayContainer.Name = "orderItemDisplayContainer";
             orderItemDisplayContainer.Size = new Size(1213, 243);
             orderItemDisplayContainer.TabIndex = 11;
-            // 
-            // taxString
-            // 
-            taxString.Anchor = AnchorStyles.Left;
-            taxString.AutoSize = true;
-            taxString.Font = new Font("Segoe UI", 20F);
-            taxString.ForeColor = Color.White;
-            taxString.Location = new Point(3, 53);
-            taxString.Name = "taxString";
-            taxString.Padding = new Padding(10, 5, 10, 5);
-            taxString.Size = new Size(74, 47);
-            taxString.TabIndex = 1;
-            taxString.Text = "Tax";
-            // 
-            // totalString
-            // 
-            totalString.Anchor = AnchorStyles.Left;
-            totalString.AutoSize = true;
-            totalString.Font = new Font("Segoe UI", 20F);
-            totalString.ForeColor = Color.White;
-            totalString.Location = new Point(3, 104);
-            totalString.Name = "totalString";
-            totalString.Padding = new Padding(10, 5, 10, 5);
-            totalString.Size = new Size(149, 47);
-            totalString.TabIndex = 2;
-            totalString.Text = "Total Due";
-            // 
-            // tenderedString
-            // 
-            tenderedString.Anchor = AnchorStyles.Left;
-            tenderedString.AutoSize = true;
-            tenderedString.Font = new Font("Segoe UI", 20F);
-            tenderedString.ForeColor = Color.White;
-            tenderedString.Location = new Point(3, 155);
-            tenderedString.Name = "tenderedString";
-            tenderedString.Padding = new Padding(10, 5, 10, 5);
-            tenderedString.Size = new Size(146, 47);
-            tenderedString.TabIndex = 3;
-            tenderedString.Text = "Tendered";
             // 
             // MainPOSForm
             // 

@@ -28,6 +28,7 @@ namespace FoodCityPOS
         public MainPOSForm(string username, string position)
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
             this.DoubleBuffered = true;
             name = username;
             Uposition = position;
@@ -104,10 +105,11 @@ namespace FoodCityPOS
             nameOfUser = new Label();
             timeDisplay = new System.Windows.Forms.Timer(components);
             valuCardPresentStrip = new Panel();
+            multiplierText = new Label();
             topPanelContainer = new Label();
             valuCardHolderInfo = new Panel();
+            typeDisplay = new Label();
             customerDisplayPreface = new Label();
-            textDisplay = new Label();
             customerNameDisplay = new System.Windows.Forms.TextBox();
             signOff = new System.Windows.Forms.Button();
             buttonContainer = new Panel();
@@ -225,11 +227,20 @@ namespace FoodCityPOS
             // valuCardPresentStrip
             // 
             valuCardPresentStrip.BackColor = Color.MediumTurquoise;
+            valuCardPresentStrip.Controls.Add(multiplierText);
             valuCardPresentStrip.Controls.Add(topPanelContainer);
             valuCardPresentStrip.Location = new Point(0, 0);
             valuCardPresentStrip.Name = "valuCardPresentStrip";
             valuCardPresentStrip.Size = new Size(1212, 60);
             valuCardPresentStrip.TabIndex = 0;
+            // 
+            // multiplierText
+            // 
+            multiplierText.Font = new Font("Segoe UI", 18F);
+            multiplierText.Location = new Point(15, 4);
+            multiplierText.Name = "multiplierText";
+            multiplierText.Size = new Size(247, 53);
+            multiplierText.TabIndex = 3;
             // 
             // topPanelContainer
             // 
@@ -242,13 +253,21 @@ namespace FoodCityPOS
             // valuCardHolderInfo
             // 
             valuCardHolderInfo.BackColor = Color.PapayaWhip;
+            valuCardHolderInfo.Controls.Add(typeDisplay);
             valuCardHolderInfo.Controls.Add(customerDisplayPreface);
-            valuCardHolderInfo.Controls.Add(textDisplay);
             valuCardHolderInfo.Controls.Add(customerNameDisplay);
             valuCardHolderInfo.Location = new Point(0, 60);
             valuCardHolderInfo.Name = "valuCardHolderInfo";
             valuCardHolderInfo.Size = new Size(1212, 34);
             valuCardHolderInfo.TabIndex = 1;
+            // 
+            // typeDisplay
+            // 
+            typeDisplay.Font = new Font("Segoe UI", 17F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            typeDisplay.Location = new Point(98, 5);
+            typeDisplay.Name = "typeDisplay";
+            typeDisplay.Size = new Size(500, 25);
+            typeDisplay.TabIndex = 2;
             // 
             // customerDisplayPreface
             // 
@@ -261,17 +280,6 @@ namespace FoodCityPOS
             customerDisplayPreface.TabIndex = 1;
             customerDisplayPreface.Text = "Customer:\r\n";
             customerDisplayPreface.Visible = false;
-            // 
-            // textDisplay
-            // 
-            textDisplay.BackColor = Color.PapayaWhip;
-            textDisplay.Font = new Font("Segoe UI", 16F);
-            textDisplay.Location = new Point(18, 0);
-            textDisplay.Margin = new Padding(0);
-            textDisplay.Name = "textDisplay";
-            textDisplay.Size = new Size(370, 29);
-            textDisplay.TabIndex = 2;
-            textDisplay.Text = "4011";
             // 
             // customerNameDisplay
             // 
@@ -666,6 +674,7 @@ namespace FoodCityPOS
             posAtSign.Text = "@";
             posAtSign.TextAlign = ContentAlignment.TopLeft;
             posAtSign.UseVisualStyleBackColor = false;
+            posAtSign.Click += posAtSign_Click;
             // 
             // posOK
             // 
@@ -699,6 +708,7 @@ namespace FoodCityPOS
             posClear.Text = "CLEAR";
             posClear.TextAlign = ContentAlignment.TopLeft;
             posClear.UseVisualStyleBackColor = false;
+            posClear.Click += posClear_Click;
             // 
             // pos3
             // 
@@ -715,6 +725,7 @@ namespace FoodCityPOS
             pos3.Text = "3";
             pos3.TextAlign = ContentAlignment.TopLeft;
             pos3.UseVisualStyleBackColor = false;
+            pos3.Click += pos3_Click;
             // 
             // pos2
             // 
@@ -731,6 +742,7 @@ namespace FoodCityPOS
             pos2.Text = "2";
             pos2.TextAlign = ContentAlignment.TopLeft;
             pos2.UseVisualStyleBackColor = false;
+            pos2.Click += pos2_Click;
             // 
             // pos5
             // 
@@ -747,6 +759,7 @@ namespace FoodCityPOS
             pos5.Text = "5";
             pos5.TextAlign = ContentAlignment.TopLeft;
             pos5.UseVisualStyleBackColor = false;
+            pos5.Click += pos5_Click;
             // 
             // pos4
             // 
@@ -763,6 +776,7 @@ namespace FoodCityPOS
             pos4.Text = "4";
             pos4.TextAlign = ContentAlignment.TopLeft;
             pos4.UseVisualStyleBackColor = false;
+            pos4.Click += pos4_Click;
             // 
             // backspace
             // 
@@ -780,6 +794,7 @@ namespace FoodCityPOS
             backspace.Text = "BKSP";
             backspace.TextAlign = ContentAlignment.TopLeft;
             backspace.UseVisualStyleBackColor = false;
+            backspace.Click += backspace_Click;
             // 
             // pos9
             // 
@@ -796,6 +811,7 @@ namespace FoodCityPOS
             pos9.Text = "9";
             pos9.TextAlign = ContentAlignment.TopLeft;
             pos9.UseVisualStyleBackColor = false;
+            pos9.Click += pos9_Click;
             // 
             // pos8
             // 
@@ -812,6 +828,7 @@ namespace FoodCityPOS
             pos8.Text = "8";
             pos8.TextAlign = ContentAlignment.TopLeft;
             pos8.UseVisualStyleBackColor = false;
+            pos8.Click += pos8_Click;
             // 
             // pos7
             // 
@@ -828,6 +845,7 @@ namespace FoodCityPOS
             pos7.Text = "7";
             pos7.TextAlign = ContentAlignment.TopLeft;
             pos7.UseVisualStyleBackColor = false;
+            pos7.Click += pos7_Click;
             // 
             // pos6
             // 
@@ -844,6 +862,7 @@ namespace FoodCityPOS
             pos6.Text = "6";
             pos6.TextAlign = ContentAlignment.TopLeft;
             pos6.UseVisualStyleBackColor = false;
+            pos6.Click += pos6_Click;
             // 
             // pos1
             // 
@@ -860,6 +879,7 @@ namespace FoodCityPOS
             pos1.Text = "1";
             pos1.TextAlign = ContentAlignment.TopLeft;
             pos1.UseVisualStyleBackColor = false;
+            pos1.Click += pos1_Click;
             // 
             // pos0
             // 
@@ -876,6 +896,7 @@ namespace FoodCityPOS
             pos0.Text = "0";
             pos0.TextAlign = ContentAlignment.TopLeft;
             pos0.UseVisualStyleBackColor = false;
+            pos0.Click += pos0_Click;
             // 
             // pos00
             // 
@@ -892,6 +913,7 @@ namespace FoodCityPOS
             pos00.Text = "00";
             pos00.TextAlign = ContentAlignment.TopLeft;
             pos00.UseVisualStyleBackColor = false;
+            pos00.Click += pos00_Click;
             // 
             // orderItemDisplayContainer
             // 
@@ -975,7 +997,6 @@ namespace FoodCityPOS
         private TableLayoutPanel numberContainer;
         private System.Windows.Forms.Button backspace;
         private Panel orderItemDisplayContainer;
-        private Label textDisplay;
         private Label customerDisplayPreface;
         private System.Windows.Forms.Button posAtSign;
         private System.Windows.Forms.Button posOK;
@@ -996,5 +1017,7 @@ namespace FoodCityPOS
         private Label tenderedString;
         private Label totalString;
         private Label taxString;
+        private Label typeDisplay;
+        private Label multiplierText;
     }
 }

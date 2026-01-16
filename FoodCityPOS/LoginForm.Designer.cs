@@ -30,6 +30,7 @@ namespace FoodCityPOS
         /// </summary>
         private void InitializeComponent()
         {
+            this.WindowState = FormWindowState.Maximized;
             loginOne = new Button();
             loginTwo = new Button();
             loginThree = new Button();

@@ -13,17 +13,19 @@ namespace FoodCityPOS
 
         public static List<Item> delayedVoids = new List<Item>();
 
+        public static bool inOrder = false;
+
         public static Item lastItem { get; set; }
 
         public static string customerFirstName { get; set; }
         public static string customerLastName { get; set; }
 
-        public double subtotal { get; set; }
+        public static double subtotal { get; set; }
 
-        public double tax { get; set; }
+        public static double tax { get; set; }
 
-        public double total { get; set; }
+        public static double total { get; set; }
 
-        public double tendered { get; set; }
+        public static double tendered { get; set; }
     }
 }

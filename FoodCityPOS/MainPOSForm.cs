@@ -82,5 +82,86 @@ namespace FoodCityPOS
                 }
             }
         }
+
+        private void pos0_Click(object sender, EventArgs e)
+        {
+            typeDisplay.Text += pos0.Text;
+        }
+
+        private void pos00_Click(object sender, EventArgs e)
+        {
+            typeDisplay.Text += pos00.Text;
+        }
+
+        private void pos1_Click(object sender, EventArgs e)
+        {
+            typeDisplay.Text += pos1.Text;
+        }
+
+        private void pos2_Click(object sender, EventArgs e)
+        {
+            typeDisplay.Text += pos2.Text;
+        }
+
+        private void pos3_Click(object sender, EventArgs e)
+        {
+            typeDisplay.Text += pos3.Text;
+        }
+
+        private void pos4_Click(object sender, EventArgs e)
+        {
+            typeDisplay.Text += pos4.Text;
+        }
+
+        private void pos5_Click(object sender, EventArgs e)
+        {
+            typeDisplay.Text += pos5.Text;
+        }
+
+        private void pos6_Click(object sender, EventArgs e)
+        {
+            typeDisplay.Text += pos6.Text;
+        }
+
+        private void pos7_Click(object sender, EventArgs e)
+        {
+            typeDisplay.Text += pos7.Text;
+        }
+
+        private void pos8_Click(object sender, EventArgs e)
+        {
+            typeDisplay.Text += pos8.Text;
+        }
+
+        private void pos9_Click(object sender, EventArgs e)
+        {
+            typeDisplay.Text += pos9.Text;
+        }
+
+        private void posClear_Click(object sender, EventArgs e)
+        {
+            typeDisplay.Text = "";
+        }
+
+        private void backspace_Click(object sender, EventArgs e)
+        {
+            if (typeDisplay.Text.Length == 0)
+            {
+                return;
+            }
+
+            typeDisplay.Text = typeDisplay.Text.Substring(0, typeDisplay.Text.Length - 1);
+        }
+
+        private void posAtSign_Click(object sender, EventArgs e)
+        {
+            if (!int.TryParse(typeDisplay.Text, out int multiplier))
+                return;
+
+            multiplierText.Text = $"Quantity: {multiplier}";
+            typeDisplay.Text = "";
+
+
+        }
     }
 }

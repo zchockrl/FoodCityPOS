@@ -21,6 +21,11 @@ namespace FoodCityPOS
 
         private void signOff_Click(object sender, EventArgs e)
         {
+            if (inOrder)
+            {
+                return;
+            }
+
             Form1 login = new Form1();
             login.Show();
             this.Hide();

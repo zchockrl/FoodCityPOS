@@ -21,7 +21,7 @@ namespace FoodCityPOS
 
         private void signOff_Click(object sender, EventArgs e)
         {
-            if (inOrder)
+            if (POSSession.inOrder)
             {
                 return;
             }

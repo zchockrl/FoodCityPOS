@@ -11,6 +11,7 @@ namespace FoodCityPOS
         {
             InitializeComponent();
             loginBoxTwo.PasswordChar = '*';
+            loginSpace.Click += loginSpaceClick;
             loginBoxOne.Enter += TextBox_Enter;
             loginBoxTwo.Enter += TextBox_Enter;
             loginA.Click += KeyboardButton_Click;
@@ -93,6 +94,13 @@ namespace FoodCityPOS
             {
                 activeTextBox.Text += btn.Text;
             }
+        }
+
+        private void loginSpaceClick (object sender, EventArgs e)
+        {
+            if (activeTextBox == null) return;
+
+            activeTextBox.Text += " ";
         }
 
         private async void loginSend_Click(object sender, EventArgs e)

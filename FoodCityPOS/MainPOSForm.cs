@@ -146,6 +146,7 @@ namespace FoodCityPOS
         private void posClear_Click(object sender, EventArgs e)
         {
             typeDisplay.Text = "";
+            multiplierText.Text = "";
         }
 
         private void backspace_Click(object sender, EventArgs e)
@@ -161,7 +162,19 @@ namespace FoodCityPOS
         private void posAtSign_Click(object sender, EventArgs e)
         {
             if (!int.TryParse(typeDisplay.Text, out int multiplier))
+            {
+                typeDisplay.Text = "";
                 return;
+            }
+
+            if (int.TryParse(typeDisplay.Text, out int invalid))
+            {
+                if (invalid <= 0)
+                {
+                    typeDisplay.Text = "";
+                    return;
+                }
+            }
 
             multiplierText.Text = $"Quantity: {multiplier}";
             typeDisplay.Text = "";

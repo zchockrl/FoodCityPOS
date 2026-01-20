@@ -27,5 +27,7 @@ namespace FoodCityPOS
         public static double total { get; set; }
 
         public static double tendered { get; set; }
+
+        public static int multiplier { get; set; }
     }
 }

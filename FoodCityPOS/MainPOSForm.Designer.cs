@@ -296,6 +296,7 @@ namespace FoodCityPOS
             customerNameDisplay.TabStop = false;
             customerNameDisplay.TextAlign = HorizontalAlignment.Center;
             customerNameDisplay.Visible = false;
+            customerNameDisplay.Enabled = false;
             // 
             // signOff
             // 

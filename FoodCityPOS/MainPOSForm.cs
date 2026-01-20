@@ -72,6 +72,8 @@ namespace FoodCityPOS
                                     customerDisplayPreface.Visible = true;
                                     customerNameDisplay.Text = $"{lastname}, {firstname}";
                                     customerNameDisplay.Visible = true;
+                                    valuCardTransaction.BackColor = Color.Red;
+                                    regularTransaction.BackColor = Color.Gray;
                                 }
                                 else
                                 {
@@ -180,6 +182,49 @@ namespace FoodCityPOS
             typeDisplay.Text = "";
             POSSession.multiplier = multiplier;
 
+        }
+
+        private void enterItem_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(typeDisplay.Text, out int converted)){
+                string itemId = converted.ToString();
+
+                string connection = "server=localhost;user id=root;password=Bbs+Cp101422!_;database=fcupos;";
+                using (MySqlConnection conn = new MySqlConnection(connection))
+                {
+                    try
+                    {
+                        conn.Open();
+                        string query = "SELECT * FROM products WHERE Id = " + itemId;
+                        using (MySqlCommand command = new MySqlCommand(query, conn))
+                        {
+
+                            using (MySqlDataReader reader = command.ExecuteReader())
+                            {
+                                if (reader.Read())
+                                {
+                                    bool perLB = reader.GetBoolean("PerLB");
+                                    bool isAlcoholic = reader.GetBoolean("IsAlcoholic");
+                                    Item newItem = new Item(itemId, reader["Name"].ToString(), perLB, Double.Parse(reader["Price"].ToString()), isAlcoholic);
+                                    POSSession.addItemToOrder(newItem);
+                                    typeDisplay.Text = "";
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Failure.");
+                                    typeDisplay.Text = "";
+                                }
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Database error: {ex.Message}");
+                        typeDisplay.Text = "";
+                    }
+                }
+            }
+            
         }
     }
 }

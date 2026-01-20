@@ -98,6 +98,8 @@ namespace FoodCityPOS
         {
             components = new System.ComponentModel.Container();
             bottomPanel = new Panel();
+            regularTransaction = new Label();
+            valuCardTransaction = new Label();
             readyLabel = new Label();
             currentDate = new Label();
             currentTime = new Label();
@@ -108,8 +110,8 @@ namespace FoodCityPOS
             multiplierText = new Label();
             topPanelContainer = new Label();
             valuCardHolderInfo = new Panel();
-            typeDisplay = new Label();
             customerDisplayPreface = new Label();
+            typeDisplay = new Label();
             customerNameDisplay = new System.Windows.Forms.TextBox();
             signOff = new System.Windows.Forms.Button();
             buttonContainer = new Panel();
@@ -161,6 +163,8 @@ namespace FoodCityPOS
             // bottomPanel
             // 
             bottomPanel.BackColor = Color.Gray;
+            bottomPanel.Controls.Add(regularTransaction);
+            bottomPanel.Controls.Add(valuCardTransaction);
             bottomPanel.Controls.Add(readyLabel);
             bottomPanel.Controls.Add(currentDate);
             bottomPanel.Controls.Add(currentTime);
@@ -171,6 +175,23 @@ namespace FoodCityPOS
             bottomPanel.Name = "bottomPanel";
             bottomPanel.Size = new Size(1496, 20);
             bottomPanel.TabIndex = 0;
+            // 
+            // regularTransaction
+            // 
+            regularTransaction.BackColor = Color.Turquoise;
+            regularTransaction.Location = new Point(464, 0);
+            regularTransaction.Name = "regularTransaction";
+            regularTransaction.Size = new Size(49, 20);
+            regularTransaction.TabIndex = 7;
+            regularTransaction.Text = "Regular";
+            // 
+            // valuCardTransaction
+            // 
+            valuCardTransaction.Location = new Point(393, 0);
+            valuCardTransaction.Name = "valuCardTransaction";
+            valuCardTransaction.Size = new Size(52, 20);
+            valuCardTransaction.TabIndex = 6;
+            valuCardTransaction.Text = "Valucard";
             // 
             // readyLabel
             // 
@@ -189,7 +210,7 @@ namespace FoodCityPOS
             currentDate.Name = "currentDate";
             currentDate.Size = new Size(70, 15);
             currentDate.TabIndex = 4;
-            currentDate.Text = DateTime.Now.ToString();
+            currentDate.Text = "1/20/2026 1:47:35 AM";
             // 
             // currentTime
             // 
@@ -253,21 +274,13 @@ namespace FoodCityPOS
             // valuCardHolderInfo
             // 
             valuCardHolderInfo.BackColor = Color.PapayaWhip;
-            valuCardHolderInfo.Controls.Add(typeDisplay);
             valuCardHolderInfo.Controls.Add(customerDisplayPreface);
+            valuCardHolderInfo.Controls.Add(typeDisplay);
             valuCardHolderInfo.Controls.Add(customerNameDisplay);
             valuCardHolderInfo.Location = new Point(0, 60);
             valuCardHolderInfo.Name = "valuCardHolderInfo";
             valuCardHolderInfo.Size = new Size(1212, 34);
             valuCardHolderInfo.TabIndex = 1;
-            // 
-            // typeDisplay
-            // 
-            typeDisplay.Font = new Font("Segoe UI", 17F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            typeDisplay.Location = new Point(98, 5);
-            typeDisplay.Name = "typeDisplay";
-            typeDisplay.Size = new Size(500, 25);
-            typeDisplay.TabIndex = 2;
             // 
             // customerDisplayPreface
             // 
@@ -281,11 +294,20 @@ namespace FoodCityPOS
             customerDisplayPreface.Text = "Customer:\r\n";
             customerDisplayPreface.Visible = false;
             // 
+            // typeDisplay
+            // 
+            typeDisplay.Font = new Font("Segoe UI", 17F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            typeDisplay.Location = new Point(98, 5);
+            typeDisplay.Name = "typeDisplay";
+            typeDisplay.Size = new Size(500, 25);
+            typeDisplay.TabIndex = 2;
+            // 
             // customerNameDisplay
             // 
             customerNameDisplay.BackColor = Color.PapayaWhip;
             customerNameDisplay.BorderStyle = BorderStyle.None;
             customerNameDisplay.Dock = DockStyle.Right;
+            customerNameDisplay.Enabled = false;
             customerNameDisplay.Font = new Font("Segoe UI", 20F);
             customerNameDisplay.Location = new Point(899, 0);
             customerNameDisplay.Margin = new Padding(0);
@@ -296,7 +318,6 @@ namespace FoodCityPOS
             customerNameDisplay.TabStop = false;
             customerNameDisplay.TextAlign = HorizontalAlignment.Center;
             customerNameDisplay.Visible = false;
-            customerNameDisplay.Enabled = false;
             // 
             // signOff
             // 
@@ -408,6 +429,7 @@ namespace FoodCityPOS
             enterItem.Text = "ENTER\r\nITEM";
             enterItem.TextAlign = ContentAlignment.TopLeft;
             enterItem.UseVisualStyleBackColor = false;
+            enterItem.Click += enterItem_Click;
             // 
             // bakeryDeliMenu
             // 
@@ -1020,5 +1042,7 @@ namespace FoodCityPOS
         private Label taxString;
         private Label typeDisplay;
         private Label multiplierText;
+        private Label regularTransaction;
+        private Label valuCardTransaction;
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FoodCityPOS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72df6c10ab778ea19140f419b20c843a979be3f7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2af12b1fe0f20d6050c1fd59b50c941a1d747d2f")]
 [assembly: System.Reflection.AssemblyProductAttribute("FoodCityPOS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FoodCityPOS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

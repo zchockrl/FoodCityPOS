@@ -10,15 +10,18 @@ namespace FoodCityPOS
     {
         public string id { get; set; }
 
+        public string name { get; set; }
+
         public bool perLb { get; set; }
 
         public double price { get; set; }
 
         public bool isAlcoholic { get; set; }
 
-        public Item(string ID, bool PerLb, double Price, bool IsAlcoholic)
+        public Item(string ID, string Name, bool PerLb, double Price, bool IsAlcoholic)
         {
             id = ID;
+            name = Name;
             perLb = PerLb;
             price = Price; 
             isAlcoholic = IsAlcoholic;

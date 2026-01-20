@@ -11,6 +11,8 @@ namespace FoodCityPOS
         public static string currentUser { get; set; }
         public static bool valuCardApplied { get; set; }
 
+        public static List<Item> itemsInOrder = new List<Item>();
+
         public static List<Item> delayedVoids = new List<Item>();
 
         public static bool inOrder = false;
@@ -29,5 +31,10 @@ namespace FoodCityPOS
         public static double tendered { get; set; }
 
         public static int multiplier { get; set; }
+
+        public void addItemToOrder(Item item)
+        {
+            itemsInOrder.Add(item);
+        }
     }
 }

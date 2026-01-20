@@ -178,7 +178,7 @@ namespace FoodCityPOS
 
             multiplierText.Text = $"Quantity: {multiplier}";
             typeDisplay.Text = "";
-
+            POSSession.multiplier = multiplier;
 
         }
     }

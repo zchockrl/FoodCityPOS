@@ -189,7 +189,7 @@ namespace FoodCityPOS
             currentDate.Name = "currentDate";
             currentDate.Size = new Size(70, 15);
             currentDate.TabIndex = 4;
-            currentDate.Text = "11/01/2025";
+            currentDate.Text = DateTime.Now.ToString();
             // 
             // currentTime
             // 

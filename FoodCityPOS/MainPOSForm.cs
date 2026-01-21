@@ -149,6 +149,7 @@ namespace FoodCityPOS
         {
             typeDisplay.Text = "";
             multiplierText.Text = "";
+            enableRightPanelButtons();
         }
 
         private void backspace_Click(object sender, EventArgs e)
@@ -212,12 +213,14 @@ namespace FoodCityPOS
                                             Item newItem = new Item(itemId, reader["Name"].ToString(), perLB, Double.Parse(reader["Price"].ToString()), isAlcoholic);
                                             POSSession.addItemToOrder(newItem);
                                         }
+                                        POSSession.multiplier = 1;
                                     }
 
                                     else
                                     {
                                         multiplierText.Font = new Font("Segoe UI", 12F);
                                         multiplierText.Text = $"Enter Item Weight in pounds with 2 decimals, followed by OK\n{reader["Name"].ToString().ToUpper()}";
+                                        disableRightPanelButtons();
                                     }
                                     typeDisplay.Text = "";
                                     POSSession.multiplier = 1;
@@ -240,6 +243,26 @@ namespace FoodCityPOS
                 }
             }
             
+        }
+
+        private void enableRightPanelButtons()
+        {
+            var buttons = rightButtonLayout.Controls.OfType<Button>();
+
+            foreach (var button in buttons)
+            {
+                button.Enabled = true;
+            }
+        }
+
+        private void disableRightPanelButtons()
+        {
+            var buttons = rightButtonLayout.Controls.OfType<Button>();
+
+            foreach (var button in buttons)
+            {
+                button.Enabled = false;
+            }
         }
     }
 }

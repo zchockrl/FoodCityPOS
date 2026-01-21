@@ -78,8 +78,7 @@
               "RelativeToolTip": "FoodCityPOS\\POSSession.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAowCAAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T06:34:34.968Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T06:34:34.968Z"
             },
             {
               "$type": "Document",
@@ -102,7 +101,7 @@
               "RelativeDocumentMoniker": "FoodCityPOS\\MainPOSForm.cs",
               "ToolTip": "C:\\Users\\Owner\\Desktop\\cs\\FoodCityPOS\\FoodCityPOS\\MainPOSForm.cs",
               "RelativeToolTip": "FoodCityPOS\\MainPOSForm.cs",
-              "ViewState": "AgIAAMcAAAAAAAAAAAAAAN0AAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAwDUAAABrAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-15T02:36:51.004Z",
               "EditorCaption": ""
@@ -130,8 +129,7 @@
               "RelativeToolTip": "FoodCityPOS\\LoginForm.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-16T06:00:56.29Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-16T06:00:56.29Z"
             },
             {
               "$type": "Document",
@@ -142,8 +140,7 @@
               "ToolTip": "C:\\Users\\Owner\\Desktop\\cs\\FoodCityPOS\\FoodCityPOS\\LoginForm.cs [Design]",
               "RelativeToolTip": "FoodCityPOS\\LoginForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-16T06:00:51.528Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-01-16T06:00:51.528Z"
             }
           ]
         }

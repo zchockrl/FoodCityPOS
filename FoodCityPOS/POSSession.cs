@@ -32,9 +32,10 @@ namespace FoodCityPOS
 
         public static int multiplier = 1;
 
-        public static void addItemToOrder(Item item)
+        public static void addItemToOrder(Item item, double price)
         {
             itemsInOrder.Add(item);
+            subtotal += price;
         }
     }
 }

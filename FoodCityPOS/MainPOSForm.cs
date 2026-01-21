@@ -51,7 +51,7 @@ namespace FoodCityPOS
             if (POSSession.valuCardApplied)
             {
 
-                string connection = "";
+                string connection = "server=localhost;user id=root;password=Bbs+Cp101422!_;database=fcupos;";
                 using (MySqlConnection conn = new MySqlConnection(connection))
                 {
                     try
@@ -190,7 +190,7 @@ namespace FoodCityPOS
             if (int.TryParse(typeDisplay.Text, out int converted)){
                 string itemId = converted.ToString();
 
-                string connection = "";
+                string connection = "server=localhost;user id=root;password=Bbs+Cp101422!_;database=fcupos;";
                 using (MySqlConnection conn = new MySqlConnection(connection))
                 {
                     try
@@ -211,7 +211,7 @@ namespace FoodCityPOS
                                         for (int i = 0; i < POSSession.multiplier; i++)
                                         {
                                             Item newItem = new Item(itemId, reader["Name"].ToString(), perLB, Double.Parse(reader["Price"].ToString()), isAlcoholic);
-                                            POSSession.addItemToOrder(newItem);
+                                            POSSession.addItemToOrder(newItem, Double.Parse(reader["Price"].ToString()));
                                         }
                                         POSSession.multiplier = 1;
                                     }

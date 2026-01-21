@@ -51,7 +51,7 @@ namespace FoodCityPOS
             if (POSSession.valuCardApplied)
             {
 
-                string connection = "server=localhost;user id=root;password=Bbs+Cp101422!_;database=fcupos;";
+                string connection = "";
                 using (MySqlConnection conn = new MySqlConnection(connection))
                 {
                     try
@@ -190,7 +190,7 @@ namespace FoodCityPOS
             if (int.TryParse(typeDisplay.Text, out int converted)){
                 string itemId = converted.ToString();
 
-                string connection = "server=localhost;user id=root;password=Bbs+Cp101422!_;database=fcupos;";
+                string connection = "";
                 using (MySqlConnection conn = new MySqlConnection(connection))
                 {
                     try

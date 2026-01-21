@@ -205,14 +205,28 @@ namespace FoodCityPOS
                                 {
                                     bool perLB = reader.GetBoolean("PerLB");
                                     bool isAlcoholic = reader.GetBoolean("IsAlcoholic");
-                                    Item newItem = new Item(itemId, reader["Name"].ToString(), perLB, Double.Parse(reader["Price"].ToString()), isAlcoholic);
-                                    POSSession.addItemToOrder(newItem);
+                                    if (!perLB)
+                                    {
+                                        for (int i = 0; i < POSSession.multiplier; i++)
+                                        {
+                                            Item newItem = new Item(itemId, reader["Name"].ToString(), perLB, Double.Parse(reader["Price"].ToString()), isAlcoholic);
+                                            POSSession.addItemToOrder(newItem);
+                                        }
+                                    }
+
+                                    else
+                                    {
+                                        multiplierText.Font = new Font("Segoe UI", 12F);
+                                        multiplierText.Text = $"Enter Item Weight in pounds with 2 decimals, followed by OK\n{reader["Name"].ToString().ToUpper()}";
+                                    }
                                     typeDisplay.Text = "";
+                                    POSSession.multiplier = 1;
                                 }
                                 else
                                 {
                                     Console.WriteLine("Failure.");
                                     typeDisplay.Text = "";
+                                    POSSession.multiplier = 1;
                                 }
                             }
                         }
@@ -221,6 +235,7 @@ namespace FoodCityPOS
                     {
                         MessageBox.Show($"Database error: {ex.Message}");
                         typeDisplay.Text = "";
+                        POSSession.multiplier = 1;
                     }
                 }
             }

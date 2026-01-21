@@ -260,7 +260,7 @@ namespace FoodCityPOS
             multiplierText.Font = new Font("Segoe UI", 18F);
             multiplierText.Location = new Point(15, 4);
             multiplierText.Name = "multiplierText";
-            multiplierText.Size = new Size(247, 53);
+            multiplierText.Size = new Size(528, 53);
             multiplierText.TabIndex = 3;
             // 
             // topPanelContainer

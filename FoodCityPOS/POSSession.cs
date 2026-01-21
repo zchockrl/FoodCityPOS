@@ -30,7 +30,7 @@ namespace FoodCityPOS
 
         public static double tendered { get; set; }
 
-        public static int multiplier { get; set; }
+        public static int multiplier = 1;
 
         public static void addItemToOrder(Item item)
         {

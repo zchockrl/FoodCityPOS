@@ -267,6 +267,7 @@ namespace FoodCityPOS
                                             AddItemToGrid(newItem);
                                         }
                                         POSSession.multiplier = 1;
+                                        multiplierText.Text = "";
                                     }
 
                                     else

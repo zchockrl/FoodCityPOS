@@ -316,7 +316,7 @@ namespace FoodCityPOS
             // 
             customerDisplayPreface.BackColor = Color.PapayaWhip;
             customerDisplayPreface.Font = new Font("Segoe UI", 12F);
-            customerDisplayPreface.Location = new Point(822, 3);
+            customerDisplayPreface.Location = new Point(879, 5);
             customerDisplayPreface.Margin = new Padding(0);
             customerDisplayPreface.Name = "customerDisplayPreface";
             customerDisplayPreface.Size = new Size(100, 22);
@@ -339,11 +339,11 @@ namespace FoodCityPOS
             customerNameDisplay.Dock = DockStyle.Right;
             customerNameDisplay.Enabled = false;
             customerNameDisplay.Font = new Font("Segoe UI", 20F);
-            customerNameDisplay.Location = new Point(951, 0);
+            customerNameDisplay.Location = new Point(1000, 0);
             customerNameDisplay.Margin = new Padding(0);
             customerNameDisplay.Multiline = true;
             customerNameDisplay.Name = "customerNameDisplay";
-            customerNameDisplay.Size = new Size(261, 34);
+            customerNameDisplay.Size = new Size(212, 34);
             customerNameDisplay.TabIndex = 0;
             customerNameDisplay.TabStop = false;
             customerNameDisplay.TextAlign = HorizontalAlignment.Center;
@@ -979,6 +979,7 @@ namespace FoodCityPOS
             // 
             // itemDisplay
             // 
+            itemDisplay.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             itemDisplay.BackgroundColor = Color.White;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
@@ -989,6 +990,7 @@ namespace FoodCityPOS
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             itemDisplay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             itemDisplay.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            itemDisplay.ColumnHeadersVisible = false;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -1010,9 +1012,6 @@ namespace FoodCityPOS
             itemDisplay.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             itemDisplay.Size = new Size(1213, 243);
             itemDisplay.TabIndex = 0;
-            itemDisplay.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            itemDisplay.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
-            itemDisplay.ColumnHeadersVisible = false;
             // 
             // MainPOSForm
             // 

@@ -9,7 +9,7 @@ namespace FoodCityPOS
     class POSSession
     {
         public static string currentUser { get; set; }
-        public static string currentUserTitle { get; set; }
+        public static Title currentUserTitle { get; set; }
         public static bool valuCardApplied { get; set; }
 
         public static List<Item> itemsInOrder = new List<Item>();

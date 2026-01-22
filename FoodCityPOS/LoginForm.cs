@@ -130,6 +130,8 @@ namespace FoodCityPOS
                             {
                                 string name = reader["name"].ToString();
                                 string position = reader["position"].ToString();
+                                Title title = (Title)Enum.Parse(typeof(Title), position);
+                                POSSession.currentUserTitle = title;
                                 POSSession.currentUser = name;
                                 MainPOSForm main = new MainPOSForm(name, position);
                                 main.Show();

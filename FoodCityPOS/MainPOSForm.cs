@@ -21,6 +21,7 @@ namespace FoodCityPOS
         public double weightedItemPrice;
         public bool weightedItemIsAlcoholic;
 
+
         public BindingList<OrderLine> orderLines = new BindingList<OrderLine>();
         private void MainPOSForm_Load(object sender, EventArgs e)
         {

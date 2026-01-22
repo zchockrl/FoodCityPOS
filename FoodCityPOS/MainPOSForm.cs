@@ -80,7 +80,10 @@ namespace FoodCityPOS
 
         private void voidMenu_Click(object sender, EventArgs e)
         {
-
+            if ((int)POSSession.currentUserTitle < 2)
+            {
+                return;
+            }
         }
 
         private void buttonContainer_Paint(object sender, PaintEventArgs e)

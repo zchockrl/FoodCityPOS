@@ -97,6 +97,9 @@ namespace FoodCityPOS
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             bottomPanel = new Panel();
             regularTransaction = new Label();
             valuCardTransaction = new Label();
@@ -151,6 +154,7 @@ namespace FoodCityPOS
             pos0 = new System.Windows.Forms.Button();
             pos00 = new System.Windows.Forms.Button();
             orderItemDisplayContainer = new Panel();
+            itemDisplay = new DataGridView();
             bottomPanel.SuspendLayout();
             valuCardPresentStrip.SuspendLayout();
             valuCardHolderInfo.SuspendLayout();
@@ -160,6 +164,8 @@ namespace FoodCityPOS
             bottomContainer.SuspendLayout();
             orderTotalsContainer.SuspendLayout();
             numberContainer.SuspendLayout();
+            orderItemDisplayContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)itemDisplay).BeginInit();
             SuspendLayout();
             // 
             // bottomPanel
@@ -965,10 +971,45 @@ namespace FoodCityPOS
             // 
             // orderItemDisplayContainer
             // 
+            orderItemDisplayContainer.Controls.Add(itemDisplay);
             orderItemDisplayContainer.Location = new Point(-1, 93);
             orderItemDisplayContainer.Name = "orderItemDisplayContainer";
             orderItemDisplayContainer.Size = new Size(1213, 243);
             orderItemDisplayContainer.TabIndex = 11;
+            // 
+            // itemDisplay
+            // 
+            itemDisplay.BackgroundColor = Color.White;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            itemDisplay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            itemDisplay.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            itemDisplay.DefaultCellStyle = dataGridViewCellStyle2;
+            itemDisplay.Dock = DockStyle.Fill;
+            itemDisplay.Location = new Point(0, 0);
+            itemDisplay.Name = "itemDisplay";
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            itemDisplay.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            itemDisplay.Size = new Size(1213, 243);
+            itemDisplay.TabIndex = 0;
             // 
             // MainPOSForm
             // 
@@ -997,6 +1038,8 @@ namespace FoodCityPOS
             orderTotalsContainer.ResumeLayout(false);
             orderTotalsContainer.PerformLayout();
             numberContainer.ResumeLayout(false);
+            orderItemDisplayContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)itemDisplay).EndInit();
             ResumeLayout(false);
         }
 
@@ -1071,5 +1114,6 @@ namespace FoodCityPOS
         private Label valuCardTransaction;
         private Label fuelBuckPreface;
         private Label fuelBuckBalanceText;
+        private DataGridView itemDisplay;
     }
 }

@@ -14,8 +14,12 @@ namespace FoodCityPOS
 {
     public partial class MainPOSForm : Form
     {
-        bool awaitingWeight = false;
-
+        public bool awaitingWeight = false;
+        public double itemPricePerLB = 0;
+        public string weightedItemID = "";
+        public string weightedItemName = "";
+        public double weightedItemPrice;
+        public bool weightedItemIsAlcoholic;
         private void MainPOSForm_Load(object sender, EventArgs e)
         {
 
@@ -229,8 +233,13 @@ namespace FoodCityPOS
 
                                     else
                                     {
+                                        itemPricePerLB = Double.Parse(reader["Price"].ToString());
                                         awaitingWeight = true;
                                         multiplierText.Font = new Font("Segoe UI", 12F);
+                                        weightedItemID = reader["Id"].ToString();
+                                        weightedItemName = reader["Name"].ToString();
+                                        weightedItemPrice = Double.Parse(reader["Price"].ToString());
+                                        weightedItemIsAlcoholic = reader.GetBoolean("IsAlcoholic");
                                         multiplierText.Text = $"Enter Item Weight in pounds with 2 decimals, followed by OK\n{reader["Name"].ToString().ToUpper()}";
                                         disableRightPanelButtons();
                                         typeDisplay.Text = "";
@@ -282,13 +291,30 @@ namespace FoodCityPOS
         {
             if (awaitingWeight)
             {
-                if (typeDisplay.Text.Length > 4 || !double.TryParse(typeDisplay.Text, out double weight)
+                if (typeDisplay.Text.Length > 4 || !double.TryParse(typeDisplay.Text, out double weight) || weight <= 0)
                 {
+                    enableRightPanelButtons();
                     typeDisplay.Text = "";
+                    multiplierText.Text = "";
+                    multiplierText.Font = new Font("Segoe UI", 18F);
+                    awaitingWeight = false;
                     return;
                 }
 
+                weight /= 100;
 
+                weightedItemPrice = Math.Round(itemPricePerLB * weight, 2);
+
+                Item newItem = new Item(weightedItemID, weightedItemName, true, weightedItemPrice, weightedItemIsAlcoholic);
+
+                POSSession.addItemToOrder(newItem, weightedItemPrice);
+
+                enableRightPanelButtons();
+                typeDisplay.Text = "";
+                multiplierText.Text = "";
+                multiplierText.Font = new Font("Segoe UI", 18F);
+                awaitingWeight = false;
+                return;
             }
         }
     }

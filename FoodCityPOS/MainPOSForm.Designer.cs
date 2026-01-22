@@ -154,6 +154,7 @@ namespace FoodCityPOS
             pos0 = new System.Windows.Forms.Button();
             pos00 = new System.Windows.Forms.Button();
             orderItemDisplayContainer = new Panel();
+            attentionTextBox = new System.Windows.Forms.TextBox();
             itemDisplay = new DataGridView();
             bottomPanel.SuspendLayout();
             valuCardPresentStrip.SuspendLayout();
@@ -971,11 +972,22 @@ namespace FoodCityPOS
             // 
             // orderItemDisplayContainer
             // 
+            orderItemDisplayContainer.Controls.Add(attentionTextBox);
             orderItemDisplayContainer.Controls.Add(itemDisplay);
             orderItemDisplayContainer.Location = new Point(-1, 93);
             orderItemDisplayContainer.Name = "orderItemDisplayContainer";
             orderItemDisplayContainer.Size = new Size(1213, 243);
             orderItemDisplayContainer.TabIndex = 11;
+            // 
+            // attentionTextBox
+            // 
+            attentionTextBox.BackColor = Color.Silver;
+            attentionTextBox.Location = new Point(662, 161);
+            attentionTextBox.Name = "attentionTextBox";
+            attentionTextBox.Size = new Size(318, 23);
+            attentionTextBox.TabIndex = 1;
+            attentionTextBox.Text = "Attention! Must be in a transaction to perform this action.";
+            attentionTextBox.Visible = false;
             // 
             // itemDisplay
             // 
@@ -1041,6 +1053,7 @@ namespace FoodCityPOS
             orderTotalsContainer.PerformLayout();
             numberContainer.ResumeLayout(false);
             orderItemDisplayContainer.ResumeLayout(false);
+            orderItemDisplayContainer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)itemDisplay).EndInit();
             ResumeLayout(false);
         }
@@ -1117,5 +1130,6 @@ namespace FoodCityPOS
         private Label fuelBuckPreface;
         private Label fuelBuckBalanceText;
         private DataGridView itemDisplay;
+        private System.Windows.Forms.TextBox attentionTextBox;
     }
 }

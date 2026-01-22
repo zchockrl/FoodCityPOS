@@ -34,6 +34,10 @@ namespace FoodCityPOS
 
         public static void addItemToOrder(Item item, double price)
         {
+            if (itemsInOrder.Count == 0)
+            {
+                inOrder = true;
+            }
             itemsInOrder.Add(item);
             subtotal += price;
         }

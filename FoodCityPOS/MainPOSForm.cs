@@ -14,6 +14,8 @@ namespace FoodCityPOS
 {
     public partial class MainPOSForm : Form
     {
+        bool awaitingWeight = false;
+
         private void MainPOSForm_Load(object sender, EventArgs e)
         {
 
@@ -74,6 +76,13 @@ namespace FoodCityPOS
                                     customerNameDisplay.Visible = true;
                                     valuCardTransaction.BackColor = Color.Red;
                                     regularTransaction.BackColor = Color.Gray;
+
+                                    int fullPoints = int.Parse(reader["points"].ToString());
+                                    int visits = fullPoints / 150;
+                                    int remainingPoints = fullPoints % 150;
+                                    fuelBuckBalanceText.Text = $"{visits} " + $"{remainingPoints}/150";
+                                    fuelBuckBalanceText.Visible = true;
+                                    fuelBuckPreface.Visible = true;
                                 }
                                 else
                                 {
@@ -147,6 +156,7 @@ namespace FoodCityPOS
 
         private void posClear_Click(object sender, EventArgs e)
         {
+            awaitingWeight = false;
             typeDisplay.Text = "";
             multiplierText.Text = "";
             enableRightPanelButtons();
@@ -187,7 +197,8 @@ namespace FoodCityPOS
 
         private void enterItem_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(typeDisplay.Text, out int converted)){
+            if (int.TryParse(typeDisplay.Text, out int converted))
+            {
                 string itemId = converted.ToString();
 
                 string connection = "server=localhost;user id=root;password=Bbs+Cp101422!_;database=fcupos;";
@@ -218,9 +229,11 @@ namespace FoodCityPOS
 
                                     else
                                     {
+                                        awaitingWeight = true;
                                         multiplierText.Font = new Font("Segoe UI", 12F);
                                         multiplierText.Text = $"Enter Item Weight in pounds with 2 decimals, followed by OK\n{reader["Name"].ToString().ToUpper()}";
                                         disableRightPanelButtons();
+                                        typeDisplay.Text = "";
                                     }
                                     typeDisplay.Text = "";
                                     POSSession.multiplier = 1;
@@ -242,7 +255,7 @@ namespace FoodCityPOS
                     }
                 }
             }
-            
+
         }
 
         private void enableRightPanelButtons()
@@ -262,6 +275,20 @@ namespace FoodCityPOS
             foreach (var button in buttons)
             {
                 button.Enabled = false;
+            }
+        }
+
+        private void posOK_Click(object sender, EventArgs e)
+        {
+            if (awaitingWeight)
+            {
+                if (typeDisplay.Text.Length > 4 || !double.TryParse(typeDisplay.Text, out double weight)
+                {
+                    typeDisplay.Text = "";
+                    return;
+                }
+
+
             }
         }
     }

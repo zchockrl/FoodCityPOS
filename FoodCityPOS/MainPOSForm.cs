@@ -20,9 +20,45 @@ namespace FoodCityPOS
         public string weightedItemName = "";
         public double weightedItemPrice;
         public bool weightedItemIsAlcoholic;
+
+        public BindingList<OrderLine> orderLines = new BindingList<OrderLine>();
         private void MainPOSForm_Load(object sender, EventArgs e)
         {
+            
+            itemDisplay.AutoGenerateColumns = false;
+            itemDisplay.DataSource = orderLines;
+            itemDisplay.Columns.Clear();
 
+            itemDisplay.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "Id",
+                Width = 90
+            });
+
+            itemDisplay.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "Name",
+                Width = 250
+            });
+
+            itemDisplay.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "UnitPrice",
+                Width = 90
+            });
+
+            itemDisplay.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "TotalPrice",
+                Width = 90
+            });
+
+            itemDisplay.ReadOnly = true;
+            itemDisplay.AllowUserToAddRows = false;
+            itemDisplay.AllowUserToDeleteRows = false;
+            itemDisplay.RowHeadersVisible = false;
+            itemDisplay.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            UpdateGridVisibility();
         }
 
         private void signOff_Click(object sender, EventArgs e)
@@ -225,8 +261,10 @@ namespace FoodCityPOS
                                     {
                                         for (int i = 0; i < POSSession.multiplier; i++)
                                         {
+                                            
                                             Item newItem = new Item(itemId, reader["Name"].ToString(), perLB, Double.Parse(reader["Price"].ToString()), isAlcoholic);
                                             POSSession.addItemToOrder(newItem, Double.Parse(reader["Price"].ToString()));
+                                            AddItemToGrid(newItem);
                                         }
                                         POSSession.multiplier = 1;
                                     }
@@ -308,7 +346,7 @@ namespace FoodCityPOS
                 Item newItem = new Item(weightedItemID, weightedItemName, true, weightedItemPrice, weightedItemIsAlcoholic);
 
                 POSSession.addItemToOrder(newItem, weightedItemPrice);
-
+                AddItemToGrid(newItem);
                 enableRightPanelButtons();
                 typeDisplay.Text = "";
                 multiplierText.Text = "";
@@ -316,6 +354,29 @@ namespace FoodCityPOS
                 awaitingWeight = false;
                 return;
             }
+        }
+
+        private void AddItemToGrid(Item item)
+        {
+            string unitPrice = item.price.ToString();
+            string totalPrice = "100";
+
+            orderLines.Add(new OrderLine
+            {
+                Id = item.id,
+                Name = item.name,
+                unitPrice = item.price.ToString(),
+                totalPrice = "100"
+            });
+
+            itemDisplay.FirstDisplayedScrollingRowIndex = itemDisplay.RowCount - 1;
+
+            UpdateGridVisibility();
+        }
+
+        private void UpdateGridVisibility()
+        {
+            itemDisplay.Visible = orderLines.Count > 0;
         }
     }
 }

@@ -41,5 +41,7 @@ namespace FoodCityPOS
             itemsInOrder.Add(item);
             subtotal += price;
         }
+
+        
     }
 }

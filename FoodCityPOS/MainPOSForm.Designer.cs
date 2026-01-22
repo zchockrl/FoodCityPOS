@@ -1010,6 +1010,9 @@ namespace FoodCityPOS
             itemDisplay.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             itemDisplay.Size = new Size(1213, 243);
             itemDisplay.TabIndex = 0;
+            itemDisplay.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            itemDisplay.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            itemDisplay.ColumnHeadersVisible = false;
             // 
             // MainPOSForm
             // 

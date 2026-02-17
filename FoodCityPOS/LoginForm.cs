@@ -56,7 +56,7 @@ namespace FoodCityPOS
         private bool loginFormCaps = true;
         private TextBox activeTextBox = null;
 
-        // Converts each valid character to their capital form
+        // Converts each valid character to their capital or lowercase form
         private void loginCapslock_Click(object sender, EventArgs e)
         {
             foreach (Button button in panel1.Controls)
